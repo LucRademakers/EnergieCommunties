@@ -1,19 +1,160 @@
-2023-10-12 14:16:43,405 rademakers-vm security-openid-connect-quickstart-dev.jar[9994] INFO  [io.quarkus] (Quarkus Main Thread) security-openid-connect-quickstart 1.0.0-SNAPSHOT on JVM (powered by Quarkus 3.4.2) started in 2.030s. Listening on: http://localhost:8080
-2023-10-12 14:16:43,417 rademakers-vm security-openid-connect-quickstart-dev.jar[9994] INFO  [io.quarkus] (Quarkus Main Thread) Profile dev activated. Live Coding activated.
-2023-10-12 14:16:43,419 rademakers-vm security-openid-connect-quickstart-dev.jar[9994] INFO  [io.quarkus] (Quarkus Main Thread) Installed features: [cdi, oidc, resteasy-reactive, resteasy-reactive-jackson, security, smallrye-context-propagation, smallrye-openapi, swagger-ui, vertx]
-2023-10-12 14:16:43,429 rademakers-vm security-openid-connect-quickstart-dev.jar[9994] INFO  [io.qua.dep.dev.RuntimeUpdatesProcessor] (vert.x-worker-thread-1) Live reload total time: 4.074s 
-2023-10-12 14:16:43,434 rademakers-vm security-openid-connect-quickstart-dev.jar[9994] INFO  [io.qua.dep.dev.RuntimeUpdatesProcessor] (vert.x-worker-thread-1) Live reload took more than 4 seconds, you may want to enable instrumentation based reload (quarkus.live-reload.instrumentation=true). This allows small changes to take effect without restarting Quarkus.
-2023-10-12 14:17:14,227 rademakers-vm security-openid-connect-quickstart-dev.jar[9994] INFO  [io.qua.oid.run.dev.OidcDevServicesUtils] (vert.x-eventloop-thread-3) Using authorization_code grant to get a token from 'http://localhost:32775/realms/quarkus/protocol/openid-connect/token' with client id 'backend-service'
-2023-10-12 14:18:54,704 rademakers-vm security-openid-connect-quickstart-dev.jar[9994] INFO  [io.qua.oid.run.dev.OidcDevServicesUtils] (vert.x-eventloop-thread-3) Test token: eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJjZklBRE5feHhDSm1Wa1d5Ti1QTlhFRXZNVVdzMnI2OEN4dG1oRUROelhVIn0.eyJleHAiOjE2OTcxMTMzMzQsImlhdCI6MTY5NzExMzAzNCwiYXV0aF90aW1lIjoxNjk3MTEzMDI4LCJqdGkiOiI1NjUzMzk3ZS1lMjQ1LTQyN2YtOWJlOC1mNGYzMTgwMGQzNjgiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjMyNzc1L3JlYWxtcy9xdWFya3VzIiwic3ViIjoiOTUyNzQ1OGQtODIzZi00MzYyLTk5ODQtOTFiYmRiOTMwODE2IiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiYmFja2VuZC1zZXJ2aWNlIiwibm9uY2UiOiJHQUZjTDhRIiwic2Vzc2lvbl9zdGF0ZSI6IjVjNzE5OTczLTAzNWYtNGViZi1iZmU0LThjNDdhZmEzZDRkMCIsInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJyZXBvcnQiLCJkZWZhdWx0LXJvbGVzLXF1YXJrdXMiXX0sInNjb3BlIjoib3BlbmlkIGVtYWlsIHByb2ZpbGUiLCJzaWQiOiI1YzcxOTk3My0wMzVmLTRlYmYtYmZlNC04YzQ3YWZhM2Q0ZDAiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsInByZWZlcnJlZF91c2VybmFtZSI6ImNoYXJsaWUiLCJnaXZlbl9uYW1lIjoiIiwiZmFtaWx5X25hbWUiOiIifQ.Yup9XqaUyH7-oaiUHOtyrlpvq0NPnAD3C0Ygkh2ogn640X4ZxDTyqIYugJ_sPO_PSIkFFzM_f3pf955cKfxrNQ6grrABn4IbufU389PZbzE_TWj4YzNg3WTKiHGNBFxgyo0DTLHZ3_KJJMOBU_2-JcaNSXSlZnxMJn0AlZThb2iEiTozHjco8bhyLAcW-XAUv-lmvLA0TxCY7aoyTtlC7NfGM7VgElW3QGNguDVaw-BIfghEEXax-qvpUPjBdZiedGoosE5BLaO9dcwRXGrXVGsHhM2LZJoMy65PUGC1AANm_2lWjgoQgcVKGj8VnbC0ZLzXfhqSNTWK2R_VU_ZekQ
-2023-10-12 14:18:54,710 rademakers-vm security-openid-connect-quickstart-dev.jar[9994] INFO  [io.qua.oid.run.dev.OidcDevServicesUtils] (vert.x-eventloop-thread-3) Sending token to 'http://localhost:8080/api/report/users/2'
-2023-10-12 14:18:54,908 rademakers-vm security-openid-connect-quickstart-dev.jar[9994] INFO  [io.qua.oid.run.dev.OidcDevServicesUtils] (vert.x-eventloop-thread-3) Result: 404
-2023-10-12 14:19:05,096 rademakers-vm security-openid-connect-quickstart-dev.jar[9994] INFO  [io.qua.oid.run.dev.OidcDevServicesUtils] (vert.x-eventloop-thread-3) Test token: eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJjZklBRE5feHhDSm1Wa1d5Ti1QTlhFRXZNVVdzMnI2OEN4dG1oRUROelhVIn0.eyJleHAiOjE2OTcxMTMzMzQsImlhdCI6MTY5NzExMzAzNCwiYXV0aF90aW1lIjoxNjk3MTEzMDI4LCJqdGkiOiI1NjUzMzk3ZS1lMjQ1LTQyN2YtOWJlOC1mNGYzMTgwMGQzNjgiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjMyNzc1L3JlYWxtcy9xdWFya3VzIiwic3ViIjoiOTUyNzQ1OGQtODIzZi00MzYyLTk5ODQtOTFiYmRiOTMwODE2IiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiYmFja2VuZC1zZXJ2aWNlIiwibm9uY2UiOiJHQUZjTDhRIiwic2Vzc2lvbl9zdGF0ZSI6IjVjNzE5OTczLTAzNWYtNGViZi1iZmU0LThjNDdhZmEzZDRkMCIsInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJyZXBvcnQiLCJkZWZhdWx0LXJvbGVzLXF1YXJrdXMiXX0sInNjb3BlIjoib3BlbmlkIGVtYWlsIHByb2ZpbGUiLCJzaWQiOiI1YzcxOTk3My0wMzVmLTRlYmYtYmZlNC04YzQ3YWZhM2Q0ZDAiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsInByZWZlcnJlZF91c2VybmFtZSI6ImNoYXJsaWUiLCJnaXZlbl9uYW1lIjoiIiwiZmFtaWx5X25hbWUiOiIifQ.Yup9XqaUyH7-oaiUHOtyrlpvq0NPnAD3C0Ygkh2ogn640X4ZxDTyqIYugJ_sPO_PSIkFFzM_f3pf955cKfxrNQ6grrABn4IbufU389PZbzE_TWj4YzNg3WTKiHGNBFxgyo0DTLHZ3_KJJMOBU_2-JcaNSXSlZnxMJn0AlZThb2iEiTozHjco8bhyLAcW-XAUv-lmvLA0TxCY7aoyTtlC7NfGM7VgElW3QGNguDVaw-BIfghEEXax-qvpUPjBdZiedGoosE5BLaO9dcwRXGrXVGsHhM2LZJoMy65PUGC1AANm_2lWjgoQgcVKGj8VnbC0ZLzXfhqSNTWK2R_VU_ZekQ
-2023-10-12 14:19:05,106 rademakers-vm security-openid-connect-quickstart-dev.jar[9994] INFO  [io.qua.oid.run.dev.OidcDevServicesUtils] (vert.x-eventloop-thread-3) Sending token to 'http://localhost:8080/api/report/users/charlie'
-2023-10-12 14:19:05,142 rademakers-vm security-openid-connect-quickstart-dev.jar[9994] INFO  [io.qua.oid.run.dev.OidcDevServicesUtils] (vert.x-eventloop-thread-3) Result: 404
-2023-10-12 14:19:10,326 rademakers-vm security-openid-connect-quickstart-dev.jar[9994] INFO  [io.qua.oid.run.dev.OidcDevServicesUtils] (vert.x-eventloop-thread-3) Test token: eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJjZklBRE5feHhDSm1Wa1d5Ti1QTlhFRXZNVVdzMnI2OEN4dG1oRUROelhVIn0.eyJleHAiOjE2OTcxMTMzMzQsImlhdCI6MTY5NzExMzAzNCwiYXV0aF90aW1lIjoxNjk3MTEzMDI4LCJqdGkiOiI1NjUzMzk3ZS1lMjQ1LTQyN2YtOWJlOC1mNGYzMTgwMGQzNjgiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjMyNzc1L3JlYWxtcy9xdWFya3VzIiwic3ViIjoiOTUyNzQ1OGQtODIzZi00MzYyLTk5ODQtOTFiYmRiOTMwODE2IiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiYmFja2VuZC1zZXJ2aWNlIiwibm9uY2UiOiJHQUZjTDhRIiwic2Vzc2lvbl9zdGF0ZSI6IjVjNzE5OTczLTAzNWYtNGViZi1iZmU0LThjNDdhZmEzZDRkMCIsInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJyZXBvcnQiLCJkZWZhdWx0LXJvbGVzLXF1YXJrdXMiXX0sInNjb3BlIjoib3BlbmlkIGVtYWlsIHByb2ZpbGUiLCJzaWQiOiI1YzcxOTk3My0wMzVmLTRlYmYtYmZlNC04YzQ3YWZhM2Q0ZDAiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsInByZWZlcnJlZF91c2VybmFtZSI6ImNoYXJsaWUiLCJnaXZlbl9uYW1lIjoiIiwiZmFtaWx5X25hbWUiOiIifQ.Yup9XqaUyH7-oaiUHOtyrlpvq0NPnAD3C0Ygkh2ogn640X4ZxDTyqIYugJ_sPO_PSIkFFzM_f3pf955cKfxrNQ6grrABn4IbufU389PZbzE_TWj4YzNg3WTKiHGNBFxgyo0DTLHZ3_KJJMOBU_2-JcaNSXSlZnxMJn0AlZThb2iEiTozHjco8bhyLAcW-XAUv-lmvLA0TxCY7aoyTtlC7NfGM7VgElW3QGNguDVaw-BIfghEEXax-qvpUPjBdZiedGoosE5BLaO9dcwRXGrXVGsHhM2LZJoMy65PUGC1AANm_2lWjgoQgcVKGj8VnbC0ZLzXfhqSNTWK2R_VU_ZekQ
-2023-10-12 14:19:10,333 rademakers-vm security-openid-connect-quickstart-dev.jar[9994] INFO  [io.qua.oid.run.dev.OidcDevServicesUtils] (vert.x-eventloop-thread-3) Sending token to 'http://localhost:8080/api/report/user/charlie'
-2023-10-12 14:19:10,501 rademakers-vm security-openid-connect-quickstart-dev.jar[9994] INFO  [io.qua.oid.run.dev.OidcDevServicesUtils] (vert.x-eventloop-thread-3) Result: 200
-2023-10-12 14:19:32,415 rademakers-vm security-openid-connect-quickstart-dev.jar[9994] INFO  [io.qua.oid.run.dev.OidcDevServicesUtils] (vert.x-eventloop-thread-3) Test token: eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJjZklBRE5feHhDSm1Wa1d5Ti1QTlhFRXZNVVdzMnI2OEN4dG1oRUROelhVIn0.eyJleHAiOjE2OTcxMTMzMzQsImlhdCI6MTY5NzExMzAzNCwiYXV0aF90aW1lIjoxNjk3MTEzMDI4LCJqdGkiOiI1NjUzMzk3ZS1lMjQ1LTQyN2YtOWJlOC1mNGYzMTgwMGQzNjgiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjMyNzc1L3JlYWxtcy9xdWFya3VzIiwic3ViIjoiOTUyNzQ1OGQtODIzZi00MzYyLTk5ODQtOTFiYmRiOTMwODE2IiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiYmFja2VuZC1zZXJ2aWNlIiwibm9uY2UiOiJHQUZjTDhRIiwic2Vzc2lvbl9zdGF0ZSI6IjVjNzE5OTczLTAzNWYtNGViZi1iZmU0LThjNDdhZmEzZDRkMCIsInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJyZXBvcnQiLCJkZWZhdWx0LXJvbGVzLXF1YXJrdXMiXX0sInNjb3BlIjoib3BlbmlkIGVtYWlsIHByb2ZpbGUiLCJzaWQiOiI1YzcxOTk3My0wMzVmLTRlYmYtYmZlNC04YzQ3YWZhM2Q0ZDAiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsInByZWZlcnJlZF91c2VybmFtZSI6ImNoYXJsaWUiLCJnaXZlbl9uYW1lIjoiIiwiZmFtaWx5X25hbWUiOiIifQ.Yup9XqaUyH7-oaiUHOtyrlpvq0NPnAD3C0Ygkh2ogn640X4ZxDTyqIYugJ_sPO_PSIkFFzM_f3pf955cKfxrNQ6grrABn4IbufU389PZbzE_TWj4YzNg3WTKiHGNBFxgyo0DTLHZ3_KJJMOBU_2-JcaNSXSlZnxMJn0AlZThb2iEiTozHjco8bhyLAcW-XAUv-lmvLA0TxCY7aoyTtlC7NfGM7VgElW3QGNguDVaw-BIfghEEXax-qvpUPjBdZiedGoosE5BLaO9dcwRXGrXVGsHhM2LZJoMy65PUGC1AANm_2lWjgoQgcVKGj8VnbC0ZLzXfhqSNTWK2R_VU_ZekQ
-2023-10-12 14:19:32,420 rademakers-vm security-openid-connect-quickstart-dev.jar[9994] INFO  [io.qua.oid.run.dev.OidcDevServicesUtils] (vert.x-eventloop-thread-3) Sending token to 'http://localhost:8080/api/report/user/5'
-2023-10-12 14:19:32,470 rademakers-vm security-openid-connect-quickstart-dev.jar[9994] INFO  [io.qua.oid.run.dev.OidcDevServicesUtils] (vert.x-eventloop-thread-3) Result: 200
-2023-10-12 14:40:11,033 rademakers-vm security-openid-connect-quickstart-dev.jar[9994] INFO  [io.quarkus] (Shutdown thread) security-openid-connect-quickstart stopped in 0.039s
+2023-10-26 14:15:45,927 timo-virtual-machine security-openid-connect-quickstart-dev.jar[17902] INFO  [io.quarkus] (Quarkus Main Thread) security-openid-connect-quickstart 1.0.0-SNAPSHOT on JVM (powered by Quarkus 3.4.2) started in 1.516s. Listening on: http://localhost:8080
+2023-10-26 14:15:45,929 timo-virtual-machine security-openid-connect-quickstart-dev.jar[17902] INFO  [io.quarkus] (Quarkus Main Thread) Profile dev activated. Live Coding activated.
+2023-10-26 14:15:45,932 timo-virtual-machine security-openid-connect-quickstart-dev.jar[17902] INFO  [io.quarkus] (Quarkus Main Thread) Installed features: [agroal, cdi, hibernate-orm, jdbc-mariadb, narayana-jta, oidc, resteasy-reactive, resteasy-reactive-jackson, security, smallrye-context-propagation, smallrye-openapi, swagger-ui, vertx]
+2023-10-26 14:15:45,935 timo-virtual-machine security-openid-connect-quickstart-dev.jar[17902] INFO  [io.qua.dep.dev.RuntimeUpdatesProcessor] (vert.x-worker-thread-1) Live reload total time: 4.502s 
+2023-10-26 14:15:45,938 timo-virtual-machine security-openid-connect-quickstart-dev.jar[17902] INFO  [io.qua.dep.dev.RuntimeUpdatesProcessor] (vert.x-worker-thread-1) Live reload took more than 4 seconds, you may want to enable instrumentation based reload (quarkus.live-reload.instrumentation=true). This allows small changes to take effect without restarting Quarkus.
+2023-10-26 14:15:45,979 timo-virtual-machine security-openid-connect-quickstart-dev.jar[17902] ERROR [io.qua.dev.run.jso.JsonRpcCodec] (vert.x-eventloop-thread-0) Error in JsonRPC Call: java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at io.smallrye.mutiny.unchecked.UncheckedSupplier.lambda$toSupplier$0(UncheckedSupplier.java:45)
+	at io.smallrye.context.impl.wrappers.SlowContextualSupplier.get(SlowContextualSupplier.java:21)
+	at io.smallrye.mutiny.operators.uni.builders.UniCreateFromItemSupplier.subscribe(UniCreateFromItemSupplier.java:28)
+	at io.smallrye.mutiny.operators.AbstractUni.subscribe(AbstractUni.java:36)
+	at io.smallrye.mutiny.groups.UniSubscribe.withSubscriber(UniSubscribe.java:51)
+	at io.smallrye.mutiny.groups.UniSubscribe.with(UniSubscribe.java:110)
+	at io.smallrye.mutiny.groups.UniSubscribe.with(UniSubscribe.java:88)
+	at io.quarkus.devui.runtime.comms.JsonRpcRouter.route(JsonRpcRouter.java:199)
+	at io.quarkus.devui.runtime.comms.JsonRpcRouter.lambda$addSocket$1(JsonRpcRouter.java:111)
+	at io.vertx.core.http.impl.WebSocketImplBase$FrameAggregator.handleTextFrame(WebSocketImplBase.java:636)
+	at io.vertx.core.http.impl.WebSocketImplBase$FrameAggregator.handle(WebSocketImplBase.java:602)
+	at io.vertx.core.http.impl.WebSocketImplBase$FrameAggregator.handle(WebSocketImplBase.java:591)
+	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:277)
+	at io.vertx.core.http.impl.WebSocketImplBase.receiveFrame(WebSocketImplBase.java:536)
+	at io.vertx.core.streams.impl.InboundBuffer.handleEvent(InboundBuffer.java:255)
+	at io.vertx.core.streams.impl.InboundBuffer.write(InboundBuffer.java:134)
+	at io.vertx.core.http.impl.WebSocketImplBase.handleFrame(WebSocketImplBase.java:476)
+	at io.vertx.core.impl.EventLoopContext.execute(EventLoopContext.java:76)
+	at io.vertx.core.impl.DuplicatedContext.execute(DuplicatedContext.java:174)
+	at io.vertx.core.http.impl.Http1xConnectionBase.handleWsFrame(Http1xConnectionBase.java:64)
+	at io.vertx.core.http.impl.Http1xServerConnection.handleOther(Http1xServerConnection.java:191)
+	at io.vertx.core.http.impl.Http1xServerConnection.handleMessage(Http1xServerConnection.java:176)
+	at io.vertx.core.net.impl.ConnectionBase.read(ConnectionBase.java:159)
+	at io.vertx.core.net.impl.VertxHandler.channelRead(VertxHandler.java:153)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:286)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:318)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.quarkus.devui.runtime.comms.JsonRpcRouter.lambda$invoke$0(JsonRpcRouter.java:98)
+	at io.smallrye.mutiny.unchecked.UncheckedSupplier.lambda$toSupplier$0(UncheckedSupplier.java:41)
+	... 48 more
+Caused by: java.lang.NullPointerException: Cannot invoke "io.quarkus.oidc.runtime.devui.OidcDevUiRpcSvcPropertiesBean.getAuthorizationUrl()" because "props" is null
+	at io.quarkus.oidc.runtime.devui.OidcDevJsonRpcService.<init>(OidcDevJsonRpcService.java:53)
+	at io.quarkus.oidc.runtime.devui.OidcDevJsonRpcService_Bean.doCreate(Unknown Source)
+	at io.quarkus.oidc.runtime.devui.OidcDevJsonRpcService_Bean.create(Unknown Source)
+	at io.quarkus.oidc.runtime.devui.OidcDevJsonRpcService_Bean.create(Unknown Source)
+	at io.quarkus.arc.impl.AbstractSharedContext.createInstanceHandle(AbstractSharedContext.java:113)
+	at io.quarkus.arc.impl.AbstractSharedContext$1.get(AbstractSharedContext.java:37)
+	at io.quarkus.arc.impl.AbstractSharedContext$1.get(AbstractSharedContext.java:34)
+	at io.quarkus.arc.impl.LazyValue.get(LazyValue.java:32)
+	at io.quarkus.arc.impl.ComputingCache.computeIfAbsent(ComputingCache.java:69)
+	at io.quarkus.arc.impl.AbstractSharedContext.get(AbstractSharedContext.java:34)
+	at io.quarkus.arc.impl.ClientProxies.getApplicationScopedDelegate(ClientProxies.java:21)
+	at io.quarkus.oidc.runtime.devui.OidcDevJsonRpcService_ClientProxy.arc$delegate(Unknown Source)
+	at io.quarkus.oidc.runtime.devui.OidcDevJsonRpcService_ClientProxy.getProperties(Unknown Source)
+	... 54 more
+
+2023-10-26 14:15:45,995 timo-virtual-machine security-openid-connect-quickstart-dev.jar[17902] ERROR [io.qua.hib.orm.run.sch.SchemaManagementIntegrator] (Hibernate post-boot validation thread for <default>) Failed to validate Schema: Schema-validation: wrong column type encountered in column [huishoudenID] in table [Huishouden]; found [int (Types#INTEGER)], but expecting [bigint (Types#BIGINT)]
+2023-10-26 14:15:46,027 timo-virtual-machine security-openid-connect-quickstart-dev.jar[17902] ERROR [io.qua.hib.orm.run.sch.SchemaManagementIntegrator] (Hibernate post-boot validation thread for <default>) The following SQL may resolve the database issues, as generated by the Hibernate schema migration tool. WARNING: You must manually verify this SQL is correct, this is a best effort guess, do not copy/paste it without verifying that it does what you expect.
+
+alter table if exists Huishouden modify column huishoudenID bigint not null;
+alter table if exists Huishouden modify column huisnummer bigint;
+
+2023-10-26 14:15:47,144 timo-virtual-machine security-openid-connect-quickstart-dev.jar[17902] ERROR [io.qua.dev.run.jso.JsonRpcCodec] (vert.x-eventloop-thread-1) Error in JsonRPC Call: java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at io.smallrye.mutiny.unchecked.UncheckedSupplier.lambda$toSupplier$0(UncheckedSupplier.java:45)
+	at io.smallrye.context.impl.wrappers.SlowContextualSupplier.get(SlowContextualSupplier.java:21)
+	at io.smallrye.mutiny.operators.uni.builders.UniCreateFromItemSupplier.subscribe(UniCreateFromItemSupplier.java:28)
+	at io.smallrye.mutiny.operators.AbstractUni.subscribe(AbstractUni.java:36)
+	at io.smallrye.mutiny.groups.UniSubscribe.withSubscriber(UniSubscribe.java:51)
+	at io.smallrye.mutiny.groups.UniSubscribe.with(UniSubscribe.java:110)
+	at io.smallrye.mutiny.groups.UniSubscribe.with(UniSubscribe.java:88)
+	at io.quarkus.devui.runtime.comms.JsonRpcRouter.route(JsonRpcRouter.java:199)
+	at io.quarkus.devui.runtime.comms.JsonRpcRouter.lambda$addSocket$1(JsonRpcRouter.java:111)
+	at io.vertx.core.http.impl.WebSocketImplBase$FrameAggregator.handleTextFrame(WebSocketImplBase.java:636)
+	at io.vertx.core.http.impl.WebSocketImplBase$FrameAggregator.handle(WebSocketImplBase.java:602)
+	at io.vertx.core.http.impl.WebSocketImplBase$FrameAggregator.handle(WebSocketImplBase.java:591)
+	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:277)
+	at io.vertx.core.http.impl.WebSocketImplBase.receiveFrame(WebSocketImplBase.java:536)
+	at io.vertx.core.streams.impl.InboundBuffer.handleEvent(InboundBuffer.java:255)
+	at io.vertx.core.streams.impl.InboundBuffer.write(InboundBuffer.java:134)
+	at io.vertx.core.http.impl.WebSocketImplBase.handleFrame(WebSocketImplBase.java:476)
+	at io.vertx.core.impl.EventLoopContext.execute(EventLoopContext.java:76)
+	at io.vertx.core.impl.DuplicatedContext.execute(DuplicatedContext.java:174)
+	at io.vertx.core.http.impl.Http1xConnectionBase.handleWsFrame(Http1xConnectionBase.java:64)
+	at io.vertx.core.http.impl.Http1xServerConnection.handleOther(Http1xServerConnection.java:191)
+	at io.vertx.core.http.impl.Http1xServerConnection.handleMessage(Http1xServerConnection.java:176)
+	at io.vertx.core.net.impl.ConnectionBase.read(ConnectionBase.java:159)
+	at io.vertx.core.net.impl.VertxHandler.channelRead(VertxHandler.java:153)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:286)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:318)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.quarkus.devui.runtime.comms.JsonRpcRouter.lambda$invoke$0(JsonRpcRouter.java:98)
+	at io.smallrye.mutiny.unchecked.UncheckedSupplier.lambda$toSupplier$0(UncheckedSupplier.java:41)
+	... 48 more
+Caused by: java.lang.NullPointerException: Cannot invoke "io.quarkus.oidc.runtime.devui.OidcDevUiRpcSvcPropertiesBean.getAuthorizationUrl()" because "props" is null
+	at io.quarkus.oidc.runtime.devui.OidcDevJsonRpcService.<init>(OidcDevJsonRpcService.java:53)
+	at io.quarkus.oidc.runtime.devui.OidcDevJsonRpcService_Bean.doCreate(Unknown Source)
+	at io.quarkus.oidc.runtime.devui.OidcDevJsonRpcService_Bean.create(Unknown Source)
+	at io.quarkus.oidc.runtime.devui.OidcDevJsonRpcService_Bean.create(Unknown Source)
+	at io.quarkus.arc.impl.AbstractSharedContext.createInstanceHandle(AbstractSharedContext.java:113)
+	at io.quarkus.arc.impl.AbstractSharedContext$1.get(AbstractSharedContext.java:37)
+	at io.quarkus.arc.impl.AbstractSharedContext$1.get(AbstractSharedContext.java:34)
+	at io.quarkus.arc.impl.LazyValue.get(LazyValue.java:32)
+	at io.quarkus.arc.impl.ComputingCache.computeIfAbsent(ComputingCache.java:69)
+	at io.quarkus.arc.impl.AbstractSharedContext.get(AbstractSharedContext.java:34)
+	at io.quarkus.arc.impl.ClientProxies.getApplicationScopedDelegate(ClientProxies.java:21)
+	at io.quarkus.oidc.runtime.devui.OidcDevJsonRpcService_ClientProxy.arc$delegate(Unknown Source)
+	at io.quarkus.oidc.runtime.devui.OidcDevJsonRpcService_ClientProxy.getProperties(Unknown Source)
+	... 54 more
+
+2023-10-26 14:27:28,957 timo-virtual-machine security-openid-connect-quickstart-dev.jar[17902] INFO  [io.quarkus] (Shutdown thread) security-openid-connect-quickstart stopped in 0.107s

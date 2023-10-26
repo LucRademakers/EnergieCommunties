@@ -1,4 +1,110 @@
-2023-10-12 13:56:13,913 rademakers-vm security-openid-connect-quickstart-dev.jar[8930] INFO  [io.quarkus] (Quarkus Main Thread) security-openid-connect-quickstart 1.0.0-SNAPSHOT on JVM (powered by Quarkus 3.4.2) started in 59.402s. Listening on: http://localhost:8080
-2023-10-12 13:56:13,922 rademakers-vm security-openid-connect-quickstart-dev.jar[8930] INFO  [io.quarkus] (Quarkus Main Thread) Profile dev activated. Live Coding activated.
-2023-10-12 13:56:13,926 rademakers-vm security-openid-connect-quickstart-dev.jar[8930] INFO  [io.quarkus] (Quarkus Main Thread) Installed features: [cdi, oidc, resteasy-reactive, resteasy-reactive-jackson, security, smallrye-context-propagation, smallrye-openapi, swagger-ui, vertx]
-2023-10-12 14:07:25,102 rademakers-vm security-openid-connect-quickstart-dev.jar[8930] INFO  [io.quarkus] (Quarkus Main Thread) security-openid-connect-quickstart stopped in 0.055s
+2023-10-26 14:07:12,073 timo-virtual-machine security-openid-connect-quickstart-dev.jar[17439] INFO  [io.quarkus] (Quarkus Main Thread) security-openid-connect-quickstart 1.0.0-SNAPSHOT on JVM (powered by Quarkus 3.4.2) started in 14.010s. Listening on: http://localhost:8080
+2023-10-26 14:07:12,102 timo-virtual-machine security-openid-connect-quickstart-dev.jar[17439] INFO  [io.quarkus] (Quarkus Main Thread) Profile dev activated. Live Coding activated.
+2023-10-26 14:07:12,105 timo-virtual-machine security-openid-connect-quickstart-dev.jar[17439] INFO  [io.quarkus] (Quarkus Main Thread) Installed features: [agroal, cdi, hibernate-orm, jdbc-mariadb, narayana-jta, oidc, resteasy-reactive, resteasy-reactive-jackson, security, smallrye-context-propagation, smallrye-openapi, swagger-ui, vertx]
+2023-10-26 14:07:12,130 timo-virtual-machine security-openid-connect-quickstart-dev.jar[17439] INFO  [io.qua.dep.dev.RuntimeUpdatesProcessor] (vert.x-worker-thread-2) Live reload total time: 16.586s 
+2023-10-26 14:07:12,132 timo-virtual-machine security-openid-connect-quickstart-dev.jar[17439] INFO  [io.qua.dep.dev.RuntimeUpdatesProcessor] (vert.x-worker-thread-2) Live reload took more than 4 seconds, you may want to enable instrumentation based reload (quarkus.live-reload.instrumentation=true). This allows small changes to take effect without restarting Quarkus.
+2023-10-26 14:07:15,643 timo-virtual-machine security-openid-connect-quickstart-dev.jar[17439] WARN  [io.ver.cor.imp.BlockedThreadChecker] (vertx-blocked-thread-checker) Thread Thread[vert.x-eventloop-thread-0,5,main] has been blocked for 2216 ms, time limit is 2000 ms: io.vertx.core.VertxException: Thread blocked
+	at java.base@17.0.8.1/java.util.zip.Inflater.inflate(Inflater.java:370)
+	at java.base@17.0.8.1/java.util.zip.InflaterInputStream.read(InflaterInputStream.java:152)
+	at java.base@17.0.8.1/java.io.InputStream.readNBytes(InputStream.java:409)
+	at java.base@17.0.8.1/java.io.InputStream.readAllBytes(InputStream.java:346)
+	at platform/jdk.zipfs@17.0.8.1/jdk.nio.zipfs.ZipFileSystem.newByteChannel(ZipFileSystem.java:977)
+	at platform/jdk.zipfs@17.0.8.1/jdk.nio.zipfs.ZipPath.newByteChannel(ZipPath.java:864)
+	at platform/jdk.zipfs@17.0.8.1/jdk.nio.zipfs.ZipFileSystemProvider.newByteChannel(ZipFileSystemProvider.java:238)
+	at java.base@17.0.8.1/java.nio.file.Files.newByteChannel(Files.java:380)
+	at java.base@17.0.8.1/java.nio.file.Files.newByteChannel(Files.java:432)
+	at java.base@17.0.8.1/java.nio.file.Files.readAllBytes(Files.java:3288)
+	at app//io.quarkus.bootstrap.classloading.PathTreeClassPathElement$Resource.getData(PathTreeClassPathElement.java:270)
+	at app//io.quarkus.bootstrap.classloading.QuarkusClassLoader.loadClass(QuarkusClassLoader.java:504)
+	at app//io.quarkus.bootstrap.classloading.QuarkusClassLoader.loadClass(QuarkusClassLoader.java:466)
+	at io.netty.handler.codec.DefaultHeaders.<init>(DefaultHeaders.java:145)
+	at io.netty.handler.codec.DefaultHeadersImpl.<init>(DefaultHeadersImpl.java:32)
+	at io.netty.handler.codec.http.DefaultHttpHeaders.<init>(DefaultHttpHeaders.java:86)
+	at io.netty.handler.codec.http.DefaultHttpHeaders.<init>(DefaultHttpHeaders.java:77)
+	at io.netty.handler.codec.http.DefaultHttpMessage.<init>(DefaultHttpMessage.java:41)
+	at io.netty.handler.codec.http.DefaultHttpResponse.<init>(DefaultHttpResponse.java:64)
+	at io.netty.handler.codec.http.DefaultFullHttpResponse.<init>(DefaultFullHttpResponse.java:62)
+	at io.netty.handler.codec.http.DefaultFullHttpResponse.<init>(DefaultFullHttpResponse.java:57)
+	at io.netty.handler.codec.http.DefaultFullHttpResponse.<init>(DefaultFullHttpResponse.java:43)
+	at io.netty.handler.codec.http.websocketx.WebSocketServerHandshaker13.newHandshakeResponse(WebSocketServerHandshaker13.java:162)
+	at io.netty.handler.codec.http.websocketx.WebSocketServerHandshaker.handshake(WebSocketServerHandshaker.java:202)
+	at io.netty.handler.codec.http.websocketx.WebSocketServerHandshaker.handshake(WebSocketServerHandshaker.java:279)
+	at io.netty.handler.codec.http.websocketx.WebSocketServerHandshaker.handshake(WebSocketServerHandshaker.java:257)
+	at io.vertx.core.http.impl.ServerWebSocketImpl.doHandshake(ServerWebSocketImpl.java:192)
+	at io.vertx.core.http.impl.ServerWebSocketImpl.handleHandshake(ServerWebSocketImpl.java:179)
+	at io.vertx.core.http.impl.ServerWebSocketImpl.lambda$setHandshake$1(ServerWebSocketImpl.java:243)
+	at io.vertx.core.http.impl.ServerWebSocketImpl$$Lambda$1968/0x00007ff768c8b4e0.handle(Unknown Source)
+	at io.vertx.core.impl.future.FutureImpl$3.onSuccess(FutureImpl.java:141)
+	at io.vertx.core.impl.future.FutureBase.emitSuccess(FutureBase.java:60)
+	at io.vertx.core.impl.future.FutureImpl.addListener(FutureImpl.java:196)
+	at io.vertx.core.impl.future.PromiseImpl.addListener(PromiseImpl.java:23)
+	at io.vertx.core.impl.future.FutureImpl.onComplete(FutureImpl.java:164)
+	at io.vertx.core.impl.future.PromiseImpl.onComplete(PromiseImpl.java:23)
+	at io.vertx.core.http.impl.ServerWebSocketImpl.setHandshake(ServerWebSocketImpl.java:241)
+	at io.vertx.core.http.impl.ServerWebSocketImpl.tryHandshake(ServerWebSocketImpl.java:214)
+	at io.vertx.core.http.impl.ServerWebSocketImpl.accept(ServerWebSocketImpl.java:115)
+	at io.vertx.core.http.impl.Http1xServerRequest.lambda$toWebSocket$2(Http1xServerRequest.java:438)
+	at io.vertx.core.http.impl.Http1xServerRequest$$Lambda$1964/0x00007ff768c85db8.apply(Unknown Source)
+	at io.vertx.core.impl.future.Mapping.onSuccess(Mapping.java:35)
+	at io.vertx.core.impl.future.FutureBase.emitSuccess(FutureBase.java:60)
+	at io.vertx.core.impl.future.FutureImpl.tryComplete(FutureImpl.java:211)
+	at io.vertx.core.impl.future.PromiseImpl.tryComplete(PromiseImpl.java:23)
+	at io.vertx.core.Promise.complete(Promise.java:66)
+	at io.vertx.core.http.impl.Http1xServerConnection.lambda$createWebSocket$3(Http1xServerConnection.java:348)
+	at io.vertx.core.http.impl.Http1xServerConnection$$Lambda$1965/0x00007ff768c868d0.run(Unknown Source)
+	at io.vertx.core.impl.EventLoopContext.execute(EventLoopContext.java:86)
+	at io.vertx.core.impl.ContextBase.execute(ContextBase.java:283)
+	at io.vertx.core.http.impl.Http1xServerConnection.createWebSocket(Http1xServerConnection.java:320)
+	at io.vertx.core.http.impl.Http1xServerRequest.lambda$webSocket$4(Http1xServerRequest.java:481)
+	at io.vertx.core.http.impl.Http1xServerRequest$$Lambda$1962/0x00007ff768c85968.handle(Unknown Source)
+	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:277)
+	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:259)
+	at io.vertx.core.http.impl.HttpEventHandler.handleEnd(HttpEventHandler.java:76)
+	at io.vertx.core.http.impl.Http1xServerRequest.onEnd(Http1xServerRequest.java:595)
+	at io.vertx.core.http.impl.Http1xServerRequest.lambda$pendingQueue$1(Http1xServerRequest.java:133)
+	at io.vertx.core.http.impl.Http1xServerRequest$$Lambda$1488/0x00007ff7688947f8.handle(Unknown Source)
+	at io.vertx.core.streams.impl.InboundBuffer.handleEvent(InboundBuffer.java:255)
+	at io.vertx.core.streams.impl.InboundBuffer.drain(InboundBuffer.java:242)
+	at io.vertx.core.streams.impl.InboundBuffer.lambda$fetch$0(InboundBuffer.java:295)
+	at io.vertx.core.streams.impl.InboundBuffer$$Lambda$1963/0x00007ff768c85b90.handle(Unknown Source)
+	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:277)
+	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:259)
+	at io.vertx.core.impl.EventLoopContext.lambda$runOnContext$0(EventLoopContext.java:43)
+	at io.vertx.core.impl.EventLoopContext$$Lambda$1455/0x00007ff7688225c8.run(Unknown Source)
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:174)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:167)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:470)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base@17.0.8.1/java.lang.Thread.run(Thread.java:833)
+
+2023-10-26 14:07:15,790 timo-virtual-machine security-openid-connect-quickstart-dev.jar[17439] ERROR [io.qua.hib.orm.run.sch.SchemaManagementIntegrator] (Hibernate post-boot validation thread for <default>) Failed to validate Schema: Schema-validation: wrong column type encountered in column [huishoudenID] in table [Huishouden]; found [int (Types#INTEGER)], but expecting [bigint (Types#BIGINT)]
+2023-10-26 14:07:15,827 timo-virtual-machine security-openid-connect-quickstart-dev.jar[17439] ERROR [io.qua.hib.orm.run.sch.SchemaManagementIntegrator] (Hibernate post-boot validation thread for <default>) The following SQL may resolve the database issues, as generated by the Hibernate schema migration tool. WARNING: You must manually verify this SQL is correct, this is a best effort guess, do not copy/paste it without verifying that it does what you expect.
+
+alter table if exists Huishouden modify column huishoudenID bigint not null;
+alter table if exists Huishouden modify column huisnummer bigint;
+
+2023-10-26 14:07:29,117 timo-virtual-machine security-openid-connect-quickstart-dev.jar[17439] ERROR [io.qua.ver.htt.run.QuarkusErrorHandler] (executor-thread-1) HTTP Request to /api/huishouden/1 failed, error id: 8d7ecc04-4cf9-479f-81c5-6ee81bf5da4b-1: jakarta.persistence.TransactionRequiredException: Transaction is not active, consider adding @Transactional to your method to automatically activate one.
+	at io.quarkus.hibernate.orm.runtime.session.TransactionScopedSession.persist(TransactionScopedSession.java:143)
+	at org.hibernate.engine.spi.SessionLazyDelegator.persist(SessionLazyDelegator.java:275)
+	at org.hibernate.Session_3a974b6a18ac399f675913d732c105426414d370_Synthetic_ClientProxy.persist(Unknown Source)
+	at nl.zuyd.ec.HuishoudenResource.getHuishouden(HuishoudenResource.java:27)
+	at nl.zuyd.ec.HuishoudenResource$quarkusrestinvoker$getHuishouden_fe3cf51f34ac83125041351dbf0bbf5b1ba3fae5.invoke(Unknown Source)
+	at org.jboss.resteasy.reactive.server.handlers.InvocationHandler.handle(InvocationHandler.java:29)
+	at io.quarkus.resteasy.reactive.server.runtime.QuarkusResteasyReactiveRequestContext.invokeHandler(QuarkusResteasyReactiveRequestContext.java:141)
+	at org.jboss.resteasy.reactive.common.core.AbstractResteasyReactiveContext.run(AbstractResteasyReactiveContext.java:147)
+	at io.quarkus.vertx.core.runtime.VertxCoreRecorder$14.runWith(VertxCoreRecorder.java:582)
+	at org.jboss.threads.EnhancedQueueExecutor$Task.run(EnhancedQueueExecutor.java:2513)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1538)
+	at org.jboss.threads.DelegatingRunnable.run(DelegatingRunnable.java:29)
+	at org.jboss.threads.ThreadLocalResettingRunnable.run(ThreadLocalResettingRunnable.java:29)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+2023-10-26 14:08:16,716 timo-virtual-machine security-openid-connect-quickstart-dev.jar[17439] ERROR [io.qua.dep.dev.JavaCompilationProvider] (vert.x-worker-thread-2) cannot find symbol
+  symbol:   class Transaction
+  location: class nl.zuyd.ec.HuishoudenResource, line 23 in /home/timo/Documents/EnergieCommunities/src/main/java/nl/zuyd/ec/HuishoudenResource.java
+2023-10-26 14:09:02,018 timo-virtual-machine security-openid-connect-quickstart-dev.jar[17439] INFO  [io.qua.dep.dev.RuntimeUpdatesProcessor] (vert.x-worker-thread-2) Restarting quarkus due to changes in HuishoudenResource.class.
+2023-10-26 14:09:02,942 timo-virtual-machine security-openid-connect-quickstart-dev.jar[17439] INFO  [io.quarkus] (Quarkus Main Thread) security-openid-connect-quickstart stopped in 0.916s

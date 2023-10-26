@@ -15,6 +15,7 @@ public class ReportResource {
     @Produces(MediaType.APPLICATION_JSON)
     @Path("/user/{id}")
     @RolesAllowed("report")
+
     public Report dailyReport(String id) {
         //
         Report myreport = new Report();

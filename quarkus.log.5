@@ -1,6 +1,31 @@
-2023-10-12 13:46:49,405 rademakers-vm security-openid-connect-quickstart-dev.jar[7614] INFO  [io.quarkus] (Quarkus Main Thread) security-openid-connect-quickstart 1.0.0-SNAPSHOT on JVM (powered by Quarkus 3.4.2) started in 1.798s. Listening on: http://localhost:8080
-2023-10-12 13:46:49,420 rademakers-vm security-openid-connect-quickstart-dev.jar[7614] INFO  [io.quarkus] (Quarkus Main Thread) Profile dev activated. Live Coding activated.
-2023-10-12 13:46:49,424 rademakers-vm security-openid-connect-quickstart-dev.jar[7614] INFO  [io.quarkus] (Quarkus Main Thread) Installed features: [cdi, oidc, resteasy-reactive, resteasy-reactive-jackson, security, smallrye-context-propagation, vertx]
-2023-10-12 13:46:49,427 rademakers-vm security-openid-connect-quickstart-dev.jar[7614] INFO  [io.qua.dep.dev.RuntimeUpdatesProcessor] (vert.x-worker-thread-1) Live reload total time: 2.109s 
-2023-10-12 13:50:32,457 rademakers-vm security-openid-connect-quickstart-dev.jar[7614] INFO  [io.qua.dep.dev.RuntimeUpdatesProcessor] (vert.x-worker-thread-2) Restarting quarkus due to changes in ReportResource.class, Report.class.
-2023-10-12 13:50:32,467 rademakers-vm security-openid-connect-quickstart-dev.jar[7614] INFO  [io.quarkus] (Quarkus Main Thread) security-openid-connect-quickstart stopped in 0.005s
+2023-10-26 13:45:03,851 timo-virtual-machine security-openid-connect-quickstart-dev.jar[14480] INFO  [io.quarkus] (Quarkus Main Thread) security-openid-connect-quickstart 1.0.0-SNAPSHOT on JVM (powered by Quarkus 3.4.2) started in 2.635s. Listening on: http://localhost:8080
+2023-10-26 13:45:03,854 timo-virtual-machine security-openid-connect-quickstart-dev.jar[14480] INFO  [io.quarkus] (Quarkus Main Thread) Profile dev activated. Live Coding activated.
+2023-10-26 13:45:03,857 timo-virtual-machine security-openid-connect-quickstart-dev.jar[14480] INFO  [io.quarkus] (Quarkus Main Thread) Installed features: [cdi, jdbc-mariadb, oidc, resteasy-reactive, resteasy-reactive-jackson, security, smallrye-context-propagation, smallrye-openapi, swagger-ui, vertx]
+2023-10-26 13:45:03,861 timo-virtual-machine security-openid-connect-quickstart-dev.jar[14480] INFO  [io.qua.dep.dev.RuntimeUpdatesProcessor] (vert.x-worker-thread-2) Live reload total time: 3.025s 
+2023-10-26 13:45:05,143 timo-virtual-machine security-openid-connect-quickstart-dev.jar[14480] INFO  [io.qua.oid.run.dev.OidcDevServicesUtils] (vert.x-eventloop-thread-3) Using authorization_code grant to get a token from 'http://localhost:32774/realms/quarkus/protocol/openid-connect/token' with client id 'backend-service'
+2023-10-26 13:45:05,265 timo-virtual-machine security-openid-connect-quickstart-dev.jar[14480] ERROR [io.qua.oid.run.dev.OidcDevServicesUtils] (vert.x-eventloop-thread-3) Token can not be acquired from OpenId Connect provider: java.lang.RuntimeException: {"error":"invalid_grant","error_description":"Code not valid"}
+2023-10-26 13:45:05,269 timo-virtual-machine security-openid-connect-quickstart-dev.jar[14480] ERROR [io.qua.dev.run.jso.JsonRpcCodec] (vert.x-eventloop-thread-3) Error in JsonRPC Call: java.lang.RuntimeException: {"error":"invalid_grant","error_description":"Code not valid"}
+	at io.quarkus.oidc.runtime.devui.OidcDevServicesUtils.getBodyAsString(OidcDevServicesUtils.java:209)
+	at io.smallrye.context.impl.wrappers.SlowContextualFunction.apply(SlowContextualFunction.java:21)
+	at io.smallrye.mutiny.operators.uni.UniOnItemTransform$UniOnItemTransformProcessor.onItem(UniOnItemTransform.java:36)
+	at io.smallrye.mutiny.vertx.AsyncResultUni.lambda$subscribe$1(AsyncResultUni.java:35)
+	at io.smallrye.mutiny.vertx.DelegatingHandler.handle(DelegatingHandler.java:25)
+	at io.vertx.ext.web.client.impl.HttpContext.handleDispatchResponse(HttpContext.java:397)
+	at io.vertx.ext.web.client.impl.HttpContext.execute(HttpContext.java:384)
+	at io.vertx.ext.web.client.impl.HttpContext.next(HttpContext.java:362)
+	at io.vertx.ext.web.client.impl.HttpContext.fire(HttpContext.java:329)
+	at io.vertx.ext.web.client.impl.HttpContext.dispatchResponse(HttpContext.java:291)
+	at io.vertx.ext.web.client.impl.HttpContext.lambda$null$7(HttpContext.java:507)
+	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:277)
+	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:259)
+	at io.vertx.core.impl.EventLoopContext.lambda$runOnContext$0(EventLoopContext.java:43)
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:174)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:167)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:470)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:566)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+2023-10-26 13:50:02,968 timo-virtual-machine security-openid-connect-quickstart-dev.jar[14480] INFO  [io.quarkus] (Shutdown thread) security-openid-connect-quickstart stopped in 0.678s

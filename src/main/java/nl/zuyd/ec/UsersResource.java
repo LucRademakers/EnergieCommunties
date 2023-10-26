@@ -41,20 +41,11 @@ public class UsersResource {
     @Path("/me")
     @NoCache
     @Produces(MediaType.TEXT_PLAIN)
-    public User me() {
-        return new User(identity);
-    }
+    public String me() {
 
-    public static class User {
-
-        private final String userName;
-
-        User(SecurityIdentity identity) {
-            this.userName = identity.getPrincipal().getName();
-        }
-
-        public String getUserName() {
-            return userName;
-        }
+        //
+        String user = identity.getPrincipal().getName();
+        System.out.print(user);
+        return user;
     }
 }
