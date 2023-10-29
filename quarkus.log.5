@@ -1,31 +1,30 @@
-2023-10-26 13:45:03,851 timo-virtual-machine security-openid-connect-quickstart-dev.jar[14480] INFO  [io.quarkus] (Quarkus Main Thread) security-openid-connect-quickstart 1.0.0-SNAPSHOT on JVM (powered by Quarkus 3.4.2) started in 2.635s. Listening on: http://localhost:8080
-2023-10-26 13:45:03,854 timo-virtual-machine security-openid-connect-quickstart-dev.jar[14480] INFO  [io.quarkus] (Quarkus Main Thread) Profile dev activated. Live Coding activated.
-2023-10-26 13:45:03,857 timo-virtual-machine security-openid-connect-quickstart-dev.jar[14480] INFO  [io.quarkus] (Quarkus Main Thread) Installed features: [cdi, jdbc-mariadb, oidc, resteasy-reactive, resteasy-reactive-jackson, security, smallrye-context-propagation, smallrye-openapi, swagger-ui, vertx]
-2023-10-26 13:45:03,861 timo-virtual-machine security-openid-connect-quickstart-dev.jar[14480] INFO  [io.qua.dep.dev.RuntimeUpdatesProcessor] (vert.x-worker-thread-2) Live reload total time: 3.025s 
-2023-10-26 13:45:05,143 timo-virtual-machine security-openid-connect-quickstart-dev.jar[14480] INFO  [io.qua.oid.run.dev.OidcDevServicesUtils] (vert.x-eventloop-thread-3) Using authorization_code grant to get a token from 'http://localhost:32774/realms/quarkus/protocol/openid-connect/token' with client id 'backend-service'
-2023-10-26 13:45:05,265 timo-virtual-machine security-openid-connect-quickstart-dev.jar[14480] ERROR [io.qua.oid.run.dev.OidcDevServicesUtils] (vert.x-eventloop-thread-3) Token can not be acquired from OpenId Connect provider: java.lang.RuntimeException: {"error":"invalid_grant","error_description":"Code not valid"}
-2023-10-26 13:45:05,269 timo-virtual-machine security-openid-connect-quickstart-dev.jar[14480] ERROR [io.qua.dev.run.jso.JsonRpcCodec] (vert.x-eventloop-thread-3) Error in JsonRPC Call: java.lang.RuntimeException: {"error":"invalid_grant","error_description":"Code not valid"}
-	at io.quarkus.oidc.runtime.devui.OidcDevServicesUtils.getBodyAsString(OidcDevServicesUtils.java:209)
-	at io.smallrye.context.impl.wrappers.SlowContextualFunction.apply(SlowContextualFunction.java:21)
-	at io.smallrye.mutiny.operators.uni.UniOnItemTransform$UniOnItemTransformProcessor.onItem(UniOnItemTransform.java:36)
-	at io.smallrye.mutiny.vertx.AsyncResultUni.lambda$subscribe$1(AsyncResultUni.java:35)
-	at io.smallrye.mutiny.vertx.DelegatingHandler.handle(DelegatingHandler.java:25)
-	at io.vertx.ext.web.client.impl.HttpContext.handleDispatchResponse(HttpContext.java:397)
-	at io.vertx.ext.web.client.impl.HttpContext.execute(HttpContext.java:384)
-	at io.vertx.ext.web.client.impl.HttpContext.next(HttpContext.java:362)
-	at io.vertx.ext.web.client.impl.HttpContext.fire(HttpContext.java:329)
-	at io.vertx.ext.web.client.impl.HttpContext.dispatchResponse(HttpContext.java:291)
-	at io.vertx.ext.web.client.impl.HttpContext.lambda$null$7(HttpContext.java:507)
-	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:277)
-	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:259)
-	at io.vertx.core.impl.EventLoopContext.lambda$runOnContext$0(EventLoopContext.java:43)
-	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:174)
-	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:167)
-	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:470)
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:566)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+2023-10-29 20:03:47,389 timo-virtual-machine security-openid-connect-quickstart-dev.jar[10736] INFO  [io.quarkus] (Quarkus Main Thread) security-openid-connect-quickstart 1.0.0-SNAPSHOT on JVM (powered by Quarkus 3.4.2) started in 4.725s. Listening on: http://localhost:8080
+2023-10-29 20:03:47,392 timo-virtual-machine security-openid-connect-quickstart-dev.jar[10736] INFO  [io.quarkus] (Quarkus Main Thread) Profile dev activated. Live Coding activated.
+2023-10-29 20:03:47,394 timo-virtual-machine security-openid-connect-quickstart-dev.jar[10736] INFO  [io.quarkus] (Quarkus Main Thread) Installed features: [agroal, cdi, hibernate-orm, jdbc-mariadb, narayana-jta, oidc, resteasy-reactive, resteasy-reactive-jackson, security, smallrye-context-propagation, smallrye-openapi, swagger-ui, vertx]
+2023-10-29 20:03:47,398 timo-virtual-machine security-openid-connect-quickstart-dev.jar[10736] INFO  [io.qua.dep.dev.RuntimeUpdatesProcessor] (vert.x-worker-thread-1) Live reload total time: 12.458s 
+2023-10-29 20:03:47,399 timo-virtual-machine security-openid-connect-quickstart-dev.jar[10736] INFO  [io.qua.dep.dev.RuntimeUpdatesProcessor] (vert.x-worker-thread-1) Live reload took more than 4 seconds, you may want to enable instrumentation based reload (quarkus.live-reload.instrumentation=true). This allows small changes to take effect without restarting Quarkus.
+2023-10-29 20:03:47,452 timo-virtual-machine security-openid-connect-quickstart-dev.jar[10736] ERROR [io.qua.hib.orm.run.sch.SchemaManagementIntegrator] (Hibernate post-boot validation thread for <default>) Failed to validate Schema: Schema-validation: wrong column type encountered in column [huishoudenID] in table [Energiemetingen]; found [int (Types#INTEGER)], but expecting [bigint (Types#BIGINT)]
+2023-10-29 20:03:47,471 timo-virtual-machine security-openid-connect-quickstart-dev.jar[10736] ERROR [io.qua.hib.orm.run.sch.SchemaManagementIntegrator] (Hibernate post-boot validation thread for <default>) The following SQL may resolve the database issues, as generated by the Hibernate schema migration tool. WARNING: You must manually verify this SQL is correct, this is a best effort guess, do not copy/paste it without verifying that it does what you expect.
+
+alter table if exists Energiemetingen modify column huishoudenID bigint not null;
+alter table if exists Energiemetingen modify column opwekKWh bigint;
+alter table if exists Energiemetingen modify column verbruikKWh bigint;
+alter table if exists Huishouden modify column huishoudenID bigint not null;
+alter table if exists Huishouden modify column huisnummer bigint;
+
+2023-10-29 20:04:13,959 timo-virtual-machine security-openid-connect-quickstart-dev.jar[10736] ERROR [io.qua.ver.htt.run.QuarkusErrorHandler] (executor-thread-1) HTTP Request to /api/verbruik/huishouden/3 failed, error id: cbbad3c3-393f-4ba3-90b1-2d96c40b112a-2: java.lang.NullPointerException: Cannot invoke "nl.zuyd.ec.Energiemetingen.getVerbruikKWh()" because the return value of "jakarta.persistence.EntityManager.find(java.lang.Class, Object)" is null
+	at nl.zuyd.ec.VerbruikRapportResource.toonVerbruikRapport(VerbruikRapportResource.java:26)
+	at nl.zuyd.ec.VerbruikRapportResource$quarkusrestinvoker$toonVerbruikRapport_ed59405bb4addadb563bd0c07410012ec86a1bb9.invoke(Unknown Source)
+	at org.jboss.resteasy.reactive.server.handlers.InvocationHandler.handle(InvocationHandler.java:29)
+	at io.quarkus.resteasy.reactive.server.runtime.QuarkusResteasyReactiveRequestContext.invokeHandler(QuarkusResteasyReactiveRequestContext.java:141)
+	at org.jboss.resteasy.reactive.common.core.AbstractResteasyReactiveContext.run(AbstractResteasyReactiveContext.java:147)
+	at io.quarkus.vertx.core.runtime.VertxCoreRecorder$14.runWith(VertxCoreRecorder.java:582)
+	at org.jboss.threads.EnhancedQueueExecutor$Task.run(EnhancedQueueExecutor.java:2513)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1538)
+	at org.jboss.threads.DelegatingRunnable.run(DelegatingRunnable.java:29)
+	at org.jboss.threads.ThreadLocalResettingRunnable.run(ThreadLocalResettingRunnable.java:29)
 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
 	at java.base/java.lang.Thread.run(Thread.java:833)
 
-2023-10-26 13:50:02,968 timo-virtual-machine security-openid-connect-quickstart-dev.jar[14480] INFO  [io.quarkus] (Shutdown thread) security-openid-connect-quickstart stopped in 0.678s
+2023-10-29 20:16:31,348 timo-virtual-machine security-openid-connect-quickstart-dev.jar[10736] INFO  [io.qua.dep.dev.RuntimeUpdatesProcessor] (vert.x-worker-thread-1) Restarting quarkus due to changes in VerbruikRapportResource.class, Energiemetingen.class.
+2023-10-29 20:16:32,405 timo-virtual-machine security-openid-connect-quickstart-dev.jar[10736] INFO  [io.quarkus] (Quarkus Main Thread) security-openid-connect-quickstart stopped in 0.859s

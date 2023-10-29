@@ -10,6 +10,8 @@ public class Huishouden {
     private Long Huisnummer;
     private String Postcode;
     private String Woonplaats;
+
+
     @Id
     public Long getHuishoudenID() {
         return HuishoudenID;
@@ -19,6 +21,8 @@ public class Huishouden {
         HuishoudenID = huishoudenID;
     }
 
+
+
     public String getStraat() {
         return Straat;
     }
@@ -26,6 +30,8 @@ public class Huishouden {
     public void setStraat(String straat) {
         Straat = straat;
     }
+
+
 
     public Long getHuisnummer() {
         return Huisnummer;
@@ -35,6 +41,9 @@ public class Huishouden {
         Huisnummer = huisnummer;
     }
 
+
+
+
     public String getPostcode() {
         return Postcode;
     }
@@ -42,6 +51,9 @@ public class Huishouden {
     public void setPostcode(String postcode) {
         Postcode = postcode;
     }
+
+
+
 
     public String getWoonplaats() {
         return Woonplaats;
