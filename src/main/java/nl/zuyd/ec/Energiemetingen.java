@@ -7,51 +7,41 @@ import java.sql.Date;
 
 @Entity
 public class Energiemetingen {
-    private Long HuishoudenID;
-    private Long VerbruikKWh;
-    private Long OpwekKWh;
-    private Date Datum;
-
+    private Long huishoudenID;
+    private Long verbruikKWh;
+    private Long opwekKWh;
+    private Date datum;
 
     @Id
     public Long getHuishoudenID() {
-        return HuishoudenID;
+        return huishoudenID;
     }
 
     public void setHuishoudenID(Long huishoudenID) {
-        HuishoudenID = huishoudenID;
+        this.huishoudenID = huishoudenID;
     }
 
-
-
-
     public Long getVerbruikKWh() {
-        return VerbruikKWh;
+        return verbruikKWh;
     }
 
     public void setVerbruikKWh(Long verbruikKWh) {
-        VerbruikKWh = verbruikKWh;
+        this.verbruikKWh = verbruikKWh;
     }
 
-
-
-
     public Long getOpwekKWh() {
-        return OpwekKWh;
+        return opwekKWh;
     }
 
     public void setOpwekKWh(Long opwekKWh) {
-        OpwekKWh = opwekKWh;
+        this.opwekKWh = opwekKWh;
     }
 
-
-
-
     public Date getDatum() {
-        return Datum;
+        return datum;
     }
 
     public void setDatum(Date datum) {
-        Datum = datum;
+        this.datum = datum;
     }
 }
