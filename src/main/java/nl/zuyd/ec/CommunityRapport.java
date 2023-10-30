@@ -2,7 +2,7 @@ package nl.zuyd.ec;
 
 import java.sql.Date;
 
-public class CommunityVerbruik {
+public class CommunityRapport {
     private Long CommunityVerbruik;
     private Long CommunityOpwek;
     private Date Datum;

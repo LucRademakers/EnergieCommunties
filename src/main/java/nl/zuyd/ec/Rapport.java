@@ -2,7 +2,7 @@ package nl.zuyd.ec;
 
 import java.sql.Date;
 
-public class VerbruikRapport {
+public class Rapport {
     private Long VerbruikKWh;
     private Long OpwekKWh;
     private Date Datum;

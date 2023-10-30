@@ -2,24 +2,15 @@ package nl.zuyd.ec;
 
 import jakarta.inject.Inject;
 import jakarta.persistence.EntityManager;
-import jakarta.persistence.Query;
 import jakarta.ws.rs.GET;
-import jakarta.ws.rs.PUT;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
-import jakarta.transaction.Transactional;
-
-import java.sql.Date;
-import java.time.LocalDate;
-import java.time.ZoneId;
-import java.util.Calendar;
-import java.util.List;
 
 @Path("/api/verbruik/community")
 //@Authenticated
 
-public class CommunityVerbruikResource {
+public class CommunityRapportResource {
     @Inject
     EntityManager em;
 
@@ -27,7 +18,7 @@ public class CommunityVerbruikResource {
     @Produces(MediaType.APPLICATION_JSON)
     //@RolesAllowed("report")
 
-    public CommunityVerbruik toonVerbruikRapport() {
+    public CommunityRapport toonVerbruikRapport() {
         //
         /*Date date = java.sql.Date.valueOf(LocalDate.now());
 
@@ -52,7 +43,7 @@ public class CommunityVerbruikResource {
         }*/
 
 
-        CommunityVerbruik verbruikRapport = new CommunityVerbruik();
+        CommunityRapport verbruikRapport = new CommunityRapport();
         //verbruikRapport.setCommunityVerbruik(totaleVerbruik);
         //verbruikRapport.setCommunityOpwek(totaleOpwek);
         //verbruikRapport.setDatum(date);
