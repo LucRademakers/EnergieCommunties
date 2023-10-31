@@ -1,5 +1,6 @@
 package nl.zuyd.ec;
 
+import io.quarkus.security.Authenticated;
 import jakarta.annotation.security.RolesAllowed;
 import jakarta.inject.Inject;
 import jakarta.persistence.EntityManager;
@@ -10,7 +11,7 @@ import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 
 @Path("/api/huishouden")
-//@Authenticated
+@Authenticated
 
 public class HuishoudenResource {
     @Inject
@@ -19,7 +20,7 @@ public class HuishoudenResource {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     @Path("/{id}")
-    //@RolesAllowed("user")
+    @RolesAllowed("user")
 
 
     //@Transactional
