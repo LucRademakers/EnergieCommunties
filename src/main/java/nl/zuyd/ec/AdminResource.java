@@ -27,9 +27,7 @@ import org.jboss.resteasy.reactive.NoCache;
 
 import io.quarkus.security.identity.SecurityIdentity;
 
-/**
- * @author <a href="mailto:psilva@redhat.com">Pedro Igor</a>
- */
+
 @Path("/api/admin")
 @Authenticated
 public class AdminResource {

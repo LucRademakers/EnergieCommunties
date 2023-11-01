@@ -1,5 +1,7 @@
 package nl.zuyd.ec;
 
+import io.quarkus.security.Authenticated;
+import jakarta.annotation.security.RolesAllowed;
 import jakarta.inject.Inject;
 import jakarta.persistence.EntityManager;
 import jakarta.ws.rs.GET;
@@ -8,7 +10,7 @@ import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 
 @Path("/api/verbruik/huishouden")
-//@Authenticated
+@Authenticated
 
 public class RapportResource {
     @Inject
@@ -17,8 +19,7 @@ public class RapportResource {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     @Path("/{id}")
-    //@RolesAllowed("report")
-
+    @RolesAllowed("huishouden")
     public Rapport toonVerbruikRapport(String id) {
         //
         Rapport rapport = new Rapport();

@@ -1,5 +1,6 @@
 package nl.zuyd.ec;
 
+import jakarta.annotation.security.RolesAllowed;
 import jakarta.inject.Inject;
 import jakarta.persistence.EntityManager;
 import jakarta.transaction.Transactional;
@@ -19,6 +20,7 @@ public class EnergiemetingenResource {
     @POST
     @Path("/energiemeting")
     @Consumes(MediaType.APPLICATION_JSON)
+    @RolesAllowed("energiemeter")
     @Transactional
     public Response uploadMeting(Energiemetingen energiemetingen){
         //

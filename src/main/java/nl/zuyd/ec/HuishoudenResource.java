@@ -20,9 +20,7 @@ public class HuishoudenResource {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     @Path("/{id}")
-    @RolesAllowed("user")
-
-
+    @RolesAllowed("huishouden")
     //@Transactional
     public Huishouden getHuishouden(String id) {
         //

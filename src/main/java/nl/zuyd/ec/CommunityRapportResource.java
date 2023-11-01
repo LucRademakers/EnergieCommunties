@@ -1,5 +1,7 @@
 package nl.zuyd.ec;
 
+import io.quarkus.security.Authenticated;
+import jakarta.annotation.security.RolesAllowed;
 import jakarta.inject.Inject;
 import jakarta.persistence.EntityManager;
 import jakarta.ws.rs.GET;
@@ -8,7 +10,7 @@ import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 
 @Path("/api/verbruik/community")
-//@Authenticated
+@Authenticated
 
 public class CommunityRapportResource {
     @Inject
@@ -16,8 +18,7 @@ public class CommunityRapportResource {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    //@RolesAllowed("report")
-
+    @RolesAllowed("huishouden")
     public CommunityRapport toonVerbruikRapport() {
         //
         /*Date date = java.sql.Date.valueOf(LocalDate.now());
