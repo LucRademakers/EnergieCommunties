@@ -22,6 +22,7 @@ public class RapportResource {
 
     @Inject
     SecurityContext context;
+
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     @Path("/{id}")
@@ -35,8 +36,9 @@ public class RapportResource {
         rapport.setVerbruikKWh(em.find(Energiemetingen.class, id).getVerbruikKWh());
         rapport.setOpwekKWh(em.find(Energiemetingen.class, id).getOpwekKWh());
         rapport.setDatum(em.find(Energiemetingen.class, id).getDatum());
-       return rapport;
+        return rapport;
     }
+
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     @Path("totaal/{id}")
@@ -47,7 +49,7 @@ public class RapportResource {
         String username = context.getUserPrincipal().getName();
         System.out.printf("username: %s \n", username);
         //todo compare username met id, if not equal dan geen rapport
-        List<Energiemetingen> metingen = em.createNamedQuery("Energiemetingen.findAll", Energiemetingen.class)
+        List<Energiemetingen> metingen = em.createNamedQuery("Energiemetingen.findAll", Energiemetingen.class).setParameter("id", id)
                 .getResultList();
         return metingen;
     }

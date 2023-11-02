@@ -1,172 +1,39 @@
-2023-11-02 10:20:06,451 timo-virtual-machine EnergieCommunitiesAPI-dev.jar[4912] ERROR [org.hib.orm.query] (JPA Startup Thread) HHH90003001: Error in named query: Energiemetingen.findAll: org.hibernate.query.SemanticException: A query exception occurred [SELECT * FROM Energiemetingen]
-	at org.hibernate.query.hql.internal.StandardHqlTranslator.parseHql(StandardHqlTranslator.java:130)
-	at org.hibernate.query.hql.internal.StandardHqlTranslator.translate(StandardHqlTranslator.java:77)
-	at org.hibernate.query.internal.NamedObjectRepositoryImpl.lambda$checkNamedQueries$5(NamedObjectRepositoryImpl.java:242)
-	at org.hibernate.query.internal.QueryInterpretationCacheStandardImpl$1.translate(QueryInterpretationCacheStandardImpl.java:111)
-	at org.hibernate.query.internal.QueryInterpretationCacheStandardImpl.createHqlInterpretation(QueryInterpretationCacheStandardImpl.java:165)
-	at org.hibernate.query.internal.QueryInterpretationCacheStandardImpl.resolveHqlInterpretation(QueryInterpretationCacheStandardImpl.java:147)
-	at org.hibernate.query.internal.QueryInterpretationCacheStandardImpl.resolveHqlInterpretation(QueryInterpretationCacheStandardImpl.java:107)
-	at org.hibernate.query.internal.NamedObjectRepositoryImpl.checkNamedQueries(NamedObjectRepositoryImpl.java:239)
-	at org.hibernate.query.internal.NamedObjectRepositoryImpl.validateNamedQueries(NamedObjectRepositoryImpl.java:212)
-	at org.hibernate.query.spi.QueryEngine.validateNamedQueries(QueryEngine.java:220)
-	at io.quarkus.hibernate.orm.runtime.observers.SessionFactoryObserverForNamedQueryValidation.sessionFactoryCreated(SessionFactoryObserverForNamedQueryValidation.java:27)
-	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
-	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:293)
-	at io.quarkus.hibernate.orm.runtime.boot.FastBootEntityManagerFactoryBuilder.build(FastBootEntityManagerFactoryBuilder.java:84)
-	at io.quarkus.hibernate.orm.runtime.FastBootHibernatePersistenceProvider.createEntityManagerFactory(FastBootHibernatePersistenceProvider.java:74)
-	at jakarta.persistence.Persistence.createEntityManagerFactory(Persistence.java:80)
-	at jakarta.persistence.Persistence.createEntityManagerFactory(Persistence.java:55)
-	at io.quarkus.hibernate.orm.runtime.JPAConfig$LazyPersistenceUnit.get(JPAConfig.java:156)
-	at io.quarkus.hibernate.orm.runtime.JPAConfig$1.run(JPAConfig.java:64)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-Caused by: org.hibernate.query.sqm.ParsingException: line 1:7 no viable alternative at input 'SELECT*'
-	at org.hibernate.query.hql.internal.StandardHqlTranslator$1.syntaxError(StandardHqlTranslator.java:46)
-	at org.antlr.v4.runtime.ProxyErrorListener.syntaxError(ProxyErrorListener.java:41)
-	at org.antlr.v4.runtime.Parser.notifyErrorListeners(Parser.java:543)
-	at org.antlr.v4.runtime.DefaultErrorStrategy.reportNoViableAlternative(DefaultErrorStrategy.java:310)
-	at org.antlr.v4.runtime.DefaultErrorStrategy.reportError(DefaultErrorStrategy.java:136)
-	at org.hibernate.grammars.hql.HqlParser.queryExpression(HqlParser.java:1780)
-	at org.hibernate.grammars.hql.HqlParser.selectStatement(HqlParser.java:400)
-	at org.hibernate.grammars.hql.HqlParser.statement(HqlParser.java:331)
-	at org.hibernate.query.hql.internal.StandardHqlTranslator.parseHql(StandardHqlTranslator.java:116)
-	... 19 more
-
-2023-11-02 10:20:06,493 timo-virtual-machine EnergieCommunitiesAPI-dev.jar[4912] ERROR [io.qua.run.Application] (Quarkus Main Thread) Failed to start application (with profile [dev]): java.lang.RuntimeException: Failed to start quarkus
-	at io.quarkus.runner.ApplicationImpl.doStart(Unknown Source)
-	at io.quarkus.runtime.Application.start(Application.java:101)
-	at io.quarkus.runtime.ApplicationLifecycleManager.run(ApplicationLifecycleManager.java:111)
-	at io.quarkus.runtime.Quarkus.run(Quarkus.java:71)
-	at io.quarkus.runtime.Quarkus.run(Quarkus.java:44)
-	at io.quarkus.runtime.Quarkus.run(Quarkus.java:124)
-	at io.quarkus.runner.GeneratedMain.main(Unknown Source)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at io.quarkus.runner.bootstrap.StartupActionImpl$1.run(StartupActionImpl.java:113)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-Caused by: java.lang.RuntimeException: jakarta.persistence.PersistenceException: [PersistenceUnit: <default>] Unable to build Hibernate SessionFactory
-	at io.quarkus.hibernate.orm.runtime.JPAConfig.startAll(JPAConfig.java:78)
-	at io.quarkus.hibernate.orm.runtime.HibernateOrmRecorder.startAllPersistenceUnits(HibernateOrmRecorder.java:101)
-	at io.quarkus.deployment.steps.HibernateOrmProcessor$startPersistenceUnits1868654632.deploy_0(Unknown Source)
-	at io.quarkus.deployment.steps.HibernateOrmProcessor$startPersistenceUnits1868654632.deploy(Unknown Source)
-	... 13 more
-Caused by: jakarta.persistence.PersistenceException: [PersistenceUnit: <default>] Unable to build Hibernate SessionFactory
-	at io.quarkus.hibernate.orm.runtime.boot.FastBootEntityManagerFactoryBuilder.persistenceException(FastBootEntityManagerFactoryBuilder.java:126)
-	at io.quarkus.hibernate.orm.runtime.boot.FastBootEntityManagerFactoryBuilder.build(FastBootEntityManagerFactoryBuilder.java:86)
-	at io.quarkus.hibernate.orm.runtime.FastBootHibernatePersistenceProvider.createEntityManagerFactory(FastBootHibernatePersistenceProvider.java:74)
-	at jakarta.persistence.Persistence.createEntityManagerFactory(Persistence.java:80)
-	at jakarta.persistence.Persistence.createEntityManagerFactory(Persistence.java:55)
-	at io.quarkus.hibernate.orm.runtime.JPAConfig$LazyPersistenceUnit.get(JPAConfig.java:156)
-	at io.quarkus.hibernate.orm.runtime.JPAConfig$1.run(JPAConfig.java:64)
-	... 1 more
-Caused by: org.hibernate.HibernateException: Errors in named queries: Energiemetingen.findAll
-	at org.hibernate.query.internal.NamedObjectRepositoryImpl.validateNamedQueries(NamedObjectRepositoryImpl.java:221)
-	at org.hibernate.query.spi.QueryEngine.validateNamedQueries(QueryEngine.java:220)
-	at io.quarkus.hibernate.orm.runtime.observers.SessionFactoryObserverForNamedQueryValidation.sessionFactoryCreated(SessionFactoryObserverForNamedQueryValidation.java:27)
-	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
-	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:293)
-	at io.quarkus.hibernate.orm.runtime.boot.FastBootEntityManagerFactoryBuilder.build(FastBootEntityManagerFactoryBuilder.java:84)
-	... 6 more
-	Suppressed: org.hibernate.query.SemanticException: A query exception occurred [SELECT * FROM Energiemetingen]
-		at org.hibernate.query.hql.internal.StandardHqlTranslator.parseHql(StandardHqlTranslator.java:130)
-		at org.hibernate.query.hql.internal.StandardHqlTranslator.translate(StandardHqlTranslator.java:77)
-		at org.hibernate.query.internal.NamedObjectRepositoryImpl.lambda$checkNamedQueries$5(NamedObjectRepositoryImpl.java:242)
-		at org.hibernate.query.internal.QueryInterpretationCacheStandardImpl$1.translate(QueryInterpretationCacheStandardImpl.java:111)
-		at org.hibernate.query.internal.QueryInterpretationCacheStandardImpl.createHqlInterpretation(QueryInterpretationCacheStandardImpl.java:165)
-		at org.hibernate.query.internal.QueryInterpretationCacheStandardImpl.resolveHqlInterpretation(QueryInterpretationCacheStandardImpl.java:147)
-		at org.hibernate.query.internal.QueryInterpretationCacheStandardImpl.resolveHqlInterpretation(QueryInterpretationCacheStandardImpl.java:107)
-		at org.hibernate.query.internal.NamedObjectRepositoryImpl.checkNamedQueries(NamedObjectRepositoryImpl.java:239)
-		at org.hibernate.query.internal.NamedObjectRepositoryImpl.validateNamedQueries(NamedObjectRepositoryImpl.java:212)
-		... 11 more
-	Caused by: org.hibernate.query.sqm.ParsingException: line 1:7 no viable alternative at input 'SELECT*'
-		at org.hibernate.query.hql.internal.StandardHqlTranslator$1.syntaxError(StandardHqlTranslator.java:46)
-		at org.antlr.v4.runtime.ProxyErrorListener.syntaxError(ProxyErrorListener.java:41)
-		at org.antlr.v4.runtime.Parser.notifyErrorListeners(Parser.java:543)
-		at org.antlr.v4.runtime.DefaultErrorStrategy.reportNoViableAlternative(DefaultErrorStrategy.java:310)
-		at org.antlr.v4.runtime.DefaultErrorStrategy.reportError(DefaultErrorStrategy.java:136)
-		at org.hibernate.grammars.hql.HqlParser.queryExpression(HqlParser.java:1780)
-		at org.hibernate.grammars.hql.HqlParser.selectStatement(HqlParser.java:400)
-		at org.hibernate.grammars.hql.HqlParser.statement(HqlParser.java:331)
-		at org.hibernate.query.hql.internal.StandardHqlTranslator.parseHql(StandardHqlTranslator.java:116)
-		... 19 more
-
-2023-11-02 10:20:06,592 timo-virtual-machine EnergieCommunitiesAPI-dev.jar[4912] ERROR [io.qua.dep.dev.IsolatedDevModeMain] (vert.x-worker-thread-1) Failed to start quarkus: io.quarkus.dev.appstate.ApplicationStartException: java.lang.RuntimeException: Failed to start quarkus
-	at io.quarkus.dev.appstate.ApplicationStateNotification.waitForApplicationStart(ApplicationStateNotification.java:58)
+2023-11-02 10:47:49,655 timo-virtual-machine EnergieCommunitiesAPI-dev.jar[4912] WARN  [io.ver.cor.imp.BlockedThreadChecker] (vertx-blocked-thread-checker) Thread Thread[vert.x-worker-thread-1,5,main] has been blocked for 64195 ms, time limit is 60000 ms: io.vertx.core.VertxException: Thread blocked
+	at java.base@17.0.8.1/java.lang.Object.wait(Native Method)
+	at java.base@17.0.8.1/java.lang.Object.wait(Object.java:338)
+	at app//io.quarkus.dev.appstate.ApplicationStateNotification.waitForApplicationStart(ApplicationStateNotification.java:52)
 	at io.quarkus.runner.bootstrap.StartupActionImpl.runMainClass(StartupActionImpl.java:132)
 	at io.quarkus.deployment.dev.IsolatedDevModeMain.restartApp(IsolatedDevModeMain.java:193)
 	at io.quarkus.deployment.dev.IsolatedDevModeMain.restartCallback(IsolatedDevModeMain.java:174)
+	at io.quarkus.deployment.dev.IsolatedDevModeMain$$Lambda$78/0x00007ff0740c8928.accept(Unknown Source)
 	at io.quarkus.deployment.dev.RuntimeUpdatesProcessor.doScan(RuntimeUpdatesProcessor.java:541)
 	at io.quarkus.deployment.dev.RuntimeUpdatesProcessor.doScan(RuntimeUpdatesProcessor.java:441)
 	at io.quarkus.vertx.http.runtime.devmode.VertxHttpHotReplacementSetup$4.handle(VertxHttpHotReplacementSetup.java:152)
 	at io.quarkus.vertx.http.runtime.devmode.VertxHttpHotReplacementSetup$4.handle(VertxHttpHotReplacementSetup.java:139)
 	at io.vertx.core.impl.ContextBase.lambda$executeBlocking$1(ContextBase.java:180)
+	at io.vertx.core.impl.ContextBase$$Lambda$2329/0x00007ff074c8d4b8.handle(Unknown Source)
 	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:277)
 	at io.vertx.core.impl.ContextBase.lambda$internalExecuteBlocking$2(ContextBase.java:199)
+	at io.vertx.core.impl.ContextBase$$Lambda$2330/0x00007ff074c8d8e0.run(Unknown Source)
 	at org.jboss.threads.ContextHandler$1.runWith(ContextHandler.java:18)
 	at org.jboss.threads.EnhancedQueueExecutor$Task.run(EnhancedQueueExecutor.java:2513)
 	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1538)
 	at org.jboss.threads.DelegatingRunnable.run(DelegatingRunnable.java:29)
 	at org.jboss.threads.ThreadLocalResettingRunnable.run(ThreadLocalResettingRunnable.java:29)
 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-Caused by: java.lang.RuntimeException: Failed to start quarkus
-	at io.quarkus.runner.ApplicationImpl.doStart(Unknown Source)
-	at io.quarkus.runtime.Application.start(Application.java:101)
-	at io.quarkus.runtime.ApplicationLifecycleManager.run(ApplicationLifecycleManager.java:111)
-	at io.quarkus.runtime.Quarkus.run(Quarkus.java:71)
-	at io.quarkus.runtime.Quarkus.run(Quarkus.java:44)
-	at io.quarkus.runtime.Quarkus.run(Quarkus.java:124)
-	at io.quarkus.runner.GeneratedMain.main(Unknown Source)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at io.quarkus.runner.bootstrap.StartupActionImpl$1.run(StartupActionImpl.java:113)
-	... 1 more
-Caused by: java.lang.RuntimeException: jakarta.persistence.PersistenceException: [PersistenceUnit: <default>] Unable to build Hibernate SessionFactory
-	at io.quarkus.hibernate.orm.runtime.JPAConfig.startAll(JPAConfig.java:78)
-	at io.quarkus.hibernate.orm.runtime.HibernateOrmRecorder.startAllPersistenceUnits(HibernateOrmRecorder.java:101)
-	at io.quarkus.deployment.steps.HibernateOrmProcessor$startPersistenceUnits1868654632.deploy_0(Unknown Source)
-	at io.quarkus.deployment.steps.HibernateOrmProcessor$startPersistenceUnits1868654632.deploy(Unknown Source)
-	... 13 more
-Caused by: jakarta.persistence.PersistenceException: [PersistenceUnit: <default>] Unable to build Hibernate SessionFactory
-	at io.quarkus.hibernate.orm.runtime.boot.FastBootEntityManagerFactoryBuilder.persistenceException(FastBootEntityManagerFactoryBuilder.java:126)
-	at io.quarkus.hibernate.orm.runtime.boot.FastBootEntityManagerFactoryBuilder.build(FastBootEntityManagerFactoryBuilder.java:86)
-	at io.quarkus.hibernate.orm.runtime.FastBootHibernatePersistenceProvider.createEntityManagerFactory(FastBootHibernatePersistenceProvider.java:74)
-	at jakarta.persistence.Persistence.createEntityManagerFactory(Persistence.java:80)
-	at jakarta.persistence.Persistence.createEntityManagerFactory(Persistence.java:55)
-	at io.quarkus.hibernate.orm.runtime.JPAConfig$LazyPersistenceUnit.get(JPAConfig.java:156)
-	at io.quarkus.hibernate.orm.runtime.JPAConfig$1.run(JPAConfig.java:64)
-	... 1 more
-Caused by: org.hibernate.HibernateException: Errors in named queries: Energiemetingen.findAll
-	at org.hibernate.query.internal.NamedObjectRepositoryImpl.validateNamedQueries(NamedObjectRepositoryImpl.java:221)
-	at org.hibernate.query.spi.QueryEngine.validateNamedQueries(QueryEngine.java:220)
-	at io.quarkus.hibernate.orm.runtime.observers.SessionFactoryObserverForNamedQueryValidation.sessionFactoryCreated(SessionFactoryObserverForNamedQueryValidation.java:27)
-	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
-	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:293)
-	at io.quarkus.hibernate.orm.runtime.boot.FastBootEntityManagerFactoryBuilder.build(FastBootEntityManagerFactoryBuilder.java:84)
-	... 6 more
-	Suppressed: org.hibernate.query.SemanticException: A query exception occurred [SELECT * FROM Energiemetingen]
-		at org.hibernate.query.hql.internal.StandardHqlTranslator.parseHql(StandardHqlTranslator.java:130)
-		at org.hibernate.query.hql.internal.StandardHqlTranslator.translate(StandardHqlTranslator.java:77)
-		at org.hibernate.query.internal.NamedObjectRepositoryImpl.lambda$checkNamedQueries$5(NamedObjectRepositoryImpl.java:242)
-		at org.hibernate.query.internal.QueryInterpretationCacheStandardImpl$1.translate(QueryInterpretationCacheStandardImpl.java:111)
-		at org.hibernate.query.internal.QueryInterpretationCacheStandardImpl.createHqlInterpretation(QueryInterpretationCacheStandardImpl.java:165)
-		at org.hibernate.query.internal.QueryInterpretationCacheStandardImpl.resolveHqlInterpretation(QueryInterpretationCacheStandardImpl.java:147)
-		at org.hibernate.query.internal.QueryInterpretationCacheStandardImpl.resolveHqlInterpretation(QueryInterpretationCacheStandardImpl.java:107)
-		at org.hibernate.query.internal.NamedObjectRepositoryImpl.checkNamedQueries(NamedObjectRepositoryImpl.java:239)
-		at org.hibernate.query.internal.NamedObjectRepositoryImpl.validateNamedQueries(NamedObjectRepositoryImpl.java:212)
-		... 11 more
-	Caused by: org.hibernate.query.sqm.ParsingException: line 1:7 no viable alternative at input 'SELECT*'
-		at org.hibernate.query.hql.internal.StandardHqlTranslator$1.syntaxError(StandardHqlTranslator.java:46)
-		at org.antlr.v4.runtime.ProxyErrorListener.syntaxError(ProxyErrorListener.java:41)
-		at org.antlr.v4.runtime.Parser.notifyErrorListeners(Parser.java:543)
-		at org.antlr.v4.runtime.DefaultErrorStrategy.reportNoViableAlternative(DefaultErrorStrategy.java:310)
-		at org.antlr.v4.runtime.DefaultErrorStrategy.reportError(DefaultErrorStrategy.java:136)
-		at org.hibernate.grammars.hql.HqlParser.queryExpression(HqlParser.java:1780)
-		at org.hibernate.grammars.hql.HqlParser.selectStatement(HqlParser.java:400)
-		at org.hibernate.grammars.hql.HqlParser.statement(HqlParser.java:331)
-		at org.hibernate.query.hql.internal.StandardHqlTranslator.parseHql(StandardHqlTranslator.java:116)
-		... 19 more
+	at java.base@17.0.8.1/java.lang.Thread.run(Thread.java:833)
 
+2023-11-02 10:47:56,596 timo-virtual-machine EnergieCommunitiesAPI-dev.jar[4912] INFO  [io.quarkus] (Quarkus Main Thread) EnergieCommunitiesAPI 1.0.0-SNAPSHOT on JVM (powered by Quarkus 3.4.2) started in 47.651s. Listening on: http://localhost:8080
+2023-11-02 10:47:56,600 timo-virtual-machine EnergieCommunitiesAPI-dev.jar[4912] INFO  [io.quarkus] (Quarkus Main Thread) Profile dev activated. Live Coding activated.
+2023-11-02 10:47:56,602 timo-virtual-machine EnergieCommunitiesAPI-dev.jar[4912] INFO  [io.quarkus] (Quarkus Main Thread) Installed features: [agroal, cdi, hibernate-orm, jdbc-mariadb, narayana-jta, oidc, resteasy-reactive, resteasy-reactive-jackson, security, smallrye-context-propagation, smallrye-openapi, swagger-ui, vertx]
+2023-11-02 10:47:56,605 timo-virtual-machine EnergieCommunitiesAPI-dev.jar[4912] INFO  [io.qua.dep.dev.RuntimeUpdatesProcessor] (vert.x-worker-thread-1) Live reload total time: 71.133s 
+2023-11-02 10:47:57,040 timo-virtual-machine EnergieCommunitiesAPI-dev.jar[4912] ERROR [io.qua.hib.orm.run.sch.SchemaManagementIntegrator] (Hibernate post-boot validation thread for <default>) Failed to validate Schema: Schema-validation: wrong column type encountered in column [huishoudenID] in table [Energiemetingen]; found [int (Types#INTEGER)], but expecting [bigint (Types#BIGINT)]
+2023-11-02 10:47:57,074 timo-virtual-machine EnergieCommunitiesAPI-dev.jar[4912] ERROR [io.qua.hib.orm.run.sch.SchemaManagementIntegrator] (Hibernate post-boot validation thread for <default>) The following SQL may resolve the database issues, as generated by the Hibernate schema migration tool. WARNING: You must manually verify this SQL is correct, this is a best effort guess, do not copy/paste it without verifying that it does what you expect.
+
+alter table if exists Energiemetingen modify column huishoudenID bigint not null;
+alter table if exists Energiemetingen modify column opwekKWh bigint;
+alter table if exists Energiemetingen modify column verbruikKWh bigint;
+alter table if exists Huishouden modify column huishoudenID bigint not null;
+alter table if exists Huishouden modify column huisnummer bigint;
+
+2023-11-02 10:49:43,457 timo-virtual-machine EnergieCommunitiesAPI-dev.jar[4912] INFO  [io.quarkus] (Shutdown thread) EnergieCommunitiesAPI stopped in 0.112s

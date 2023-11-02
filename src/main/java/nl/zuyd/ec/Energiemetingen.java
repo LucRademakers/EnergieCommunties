@@ -6,7 +6,8 @@ import java.sql.Date;
 
 @Entity
 @Table(name = "Energiemetingen")
-@NamedQuery(name = "Energiemetingen.findAll", query = "SELECT f FROM Energiemetingen f", hints = @QueryHint(name = "org.hibernate.cacheable", value = "true"))
+@NamedQuery(name = "Energiemetingen.findAll", query = "SELECT f FROM Energiemetingen f WHERE huishoudenID = :id", hints = @QueryHint(name = "org.hibernate.cacheable", value = "true"))
+
 public class Energiemetingen {
     private Long huishoudenID;
     private Long verbruikKWh;
