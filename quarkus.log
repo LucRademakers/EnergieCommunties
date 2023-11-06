@@ -1,158 +1,24 @@
-2023-11-06 12:27:56,424 timo-virtual-machine EnergieCommunitiesAPI-dev.jar[4807] WARN  [io.qua.oid.com.run.OidcCommonUtils] (vert.x-eventloop-thread-1) OIDC Server is not available:: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: localhost/127.0.0.1:8180
-Caused by: java.net.ConnectException: Connection refused
-	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
-	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
-	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:946)
-	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:337)
-	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:776)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-11-06 14:53:17,540 timo-virtual-machine EnergieCommunitiesAPI-dev.jar[7744] INFO  [io.quarkus] (Quarkus Main Thread) EnergieCommunitiesAPI 1.0.0-SNAPSHOT on JVM (powered by Quarkus 3.4.2) started in 2.032s. Listening on: http://localhost:8080
+2023-11-06 14:53:17,542 timo-virtual-machine EnergieCommunitiesAPI-dev.jar[7744] INFO  [io.quarkus] (Quarkus Main Thread) Profile dev activated. Live Coding activated.
+2023-11-06 14:53:17,545 timo-virtual-machine EnergieCommunitiesAPI-dev.jar[7744] INFO  [io.quarkus] (Quarkus Main Thread) Installed features: [agroal, cdi, hibernate-orm, jdbc-mariadb, narayana-jta, oidc, resteasy-reactive, resteasy-reactive-jackson, security, smallrye-context-propagation, smallrye-openapi, swagger-ui, vertx]
+2023-11-06 14:53:17,547 timo-virtual-machine EnergieCommunitiesAPI-dev.jar[7744] INFO  [io.qua.dep.dev.RuntimeUpdatesProcessor] (vert.x-worker-thread-1) Live reload total time: 4.109s 
+2023-11-06 14:53:17,559 timo-virtual-machine EnergieCommunitiesAPI-dev.jar[7744] ERROR [io.qua.hib.orm.run.sch.SchemaManagementIntegrator] (Hibernate post-boot validation thread for <default>) Failed to validate Schema: Schema-validation: wrong column type encountered in column [verkoperID] in table [Batterij]; found [int (Types#INTEGER)], but expecting [bigint (Types#BIGINT)]
+2023-11-06 14:53:17,564 timo-virtual-machine EnergieCommunitiesAPI-dev.jar[7744] INFO  [nl.zuy.ec.RequestLoggingFilter] (executor-thread-1) [REST Logging] Authorization: [Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJHNWljUFNKdGxuZ2RaMFd1VkFWMzRXNFZqeVVhYmRvZXJRWWtNdU96RzRVIn0.eyJleHAiOjE2OTkyODA1MzEsImlhdCI6MTY5OTI3ODczMSwiYXV0aF90aW1lIjoxNjk5Mjc4NzMxLCJqdGkiOiI0N2I2MGExMy0yYmFiLTQyOWQtODQ3Yi1iMTc4ZDQ4MzMxYzUiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgxODAvcmVhbG1zL2VuZXJnaWVjb21tdW5pdGllcyIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiI1YjQ4ZTcwZS03YTIzLTQ1OGMtYTgzZC0wNWRiNDIxM2I0MDQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJwb3J0YWFsIiwic2Vzc2lvbl9zdGF0ZSI6IjUwOTc4MTlmLTFkMGMtNDU3NS05MzMyLWE4NDc0MmI0MmMxNiIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiKiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiZGVmYXVsdC1yb2xlcy1lbmVyZ2llY29tbXVuaXRpZXMiLCJvZmZsaW5lX2FjY2VzcyIsImh1aXNob3VkZW4iLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwgbWljcm9wcm9maWxlLWp3dCIsInNpZCI6IjUwOTc4MTlmLTFkMGMtNDU3NS05MzMyLWE4NDc0MmI0MmMxNiIsInVwbiI6Imh1aXNob3VkZW4yIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsIm5hbWUiOiJCZXBwaWUgSmFzcGVycyIsImdyb3VwcyI6WyJkZWZhdWx0LXJvbGVzLWVuZXJnaWVjb21tdW5pdGllcyIsIm9mZmxpbmVfYWNjZXNzIiwiaHVpc2hvdWRlbiIsInVtYV9hdXRob3JpemF0aW9uIl0sInByZWZlcnJlZF91c2VybmFtZSI6Imh1aXNob3VkZW4yIiwiZ2l2ZW5fbmFtZSI6IkJlcHBpZSIsImZhbWlseV9uYW1lIjoiSmFzcGVycyIsImVtYWlsIjoiYmVwcGllQHRlc3QuY29tIn0.nL851a6QrMB8xLXhj3KH1ix3ALOG7YJCEeMBmD8Wizg5w9NAFUK2BBJiFzG3_C7VsDwSYTVXD1ymq3Unq6k8yVIj-JkaRmltkXYzt7waKEi3oWNfJ5xtyemf_6t7EYc7IERZSjzfdIDkLhP5WIozc0LDfkDCg7aaIPsCNXJwi9tFDbuclX6mnHt4JALYZi5wew61cEpmGlMFUUDrh_-mH8v-5y3k3pS-hHTc0a3HDjRdo6nrn-zPPQmD7s4knvN7CM0VY74mwdHMNydxms8ni-HoIHxhs8pwpLyrgBhgKNefX3wztayL4JdXj_F3Ra2HGof-YvSyCJqfCegkleTxYQ]
+2023-11-06 14:53:17,565 timo-virtual-machine EnergieCommunitiesAPI-dev.jar[7744] INFO  [nl.zuy.ec.RequestLoggingFilter] (executor-thread-1) [REST Logging] host: [localhost:8080]
+2023-11-06 14:53:17,566 timo-virtual-machine EnergieCommunitiesAPI-dev.jar[7744] INFO  [nl.zuy.ec.RequestLoggingFilter] (executor-thread-1) [REST Logging] User-Agent: [Resteasy Reactive Client]
+2023-11-06 14:53:17,568 timo-virtual-machine EnergieCommunitiesAPI-dev.jar[7744] INFO  [nl.zuy.ec.RequestLoggingFilter] (executor-thread-1) [REST Logging] x-quarkus-hot-deployment-done: [true]
+2023-11-06 14:53:17,580 timo-virtual-machine EnergieCommunitiesAPI-dev.jar[7744] ERROR [io.qua.hib.orm.run.sch.SchemaManagementIntegrator] (Hibernate post-boot validation thread for <default>) The following SQL may resolve the database issues, as generated by the Hibernate schema migration tool. WARNING: You must manually verify this SQL is correct, this is a best effort guess, do not copy/paste it without verifying that it does what you expect.
 
-2023-11-06 12:27:56,433 timo-virtual-machine EnergieCommunitiesAPI-dev.jar[4807] WARN  [io.qua.oid.run.OidcRecorder] (vert.x-eventloop-thread-1) OIDC server is not available at the 'http://localhost:8180/realms/energiecommunities' URL. Please make sure it is correct. Note it has to end with a realm value if you work with Keycloak, for example: 'https://localhost:8180/auth/realms/quarkus'
-2023-11-06 12:27:56,433 timo-virtual-machine EnergieCommunitiesAPI-dev.jar[4807] WARN  [io.qua.oid.run.OidcRecorder] (vert.x-eventloop-thread-1) Tenant 'Default': 'OIDC Server is not available'. OIDC server is not available yet, an attempt to connect will be made during the first request. Access to resources protected by this tenant may fail if OIDC server will not become available
-2023-11-06 12:27:57,024 timo-virtual-machine EnergieCommunitiesAPI-dev.jar[4807] WARN  [io.agr.pool] (agroal-11) Datasource '<default>': Socket fail to connect to host:address=(host=localhost)(port=3306)(type=primary). Connection refused
-2023-11-06 12:27:57,034 timo-virtual-machine EnergieCommunitiesAPI-dev.jar[4807] WARN  [org.hib.eng.jdb.env.int.JdbcEnvironmentInitiator] (JPA Startup Thread) HHH000342: Could not obtain connection to query metadata: java.sql.SQLNonTransientConnectionException: Socket fail to connect to host:address=(host=localhost)(port=3306)(type=primary). Connection refused
-	at org.mariadb.jdbc.client.impl.ConnectionHelper.connectSocket(ConnectionHelper.java:137)
-	at org.mariadb.jdbc.client.impl.StandardClient.<init>(StandardClient.java:99)
-	at org.mariadb.jdbc.Driver.connect(Driver.java:70)
-	at org.mariadb.jdbc.Driver.connect(Driver.java:101)
-	at org.mariadb.jdbc.Driver.connect(Driver.java:27)
-	at io.agroal.pool.ConnectionFactory.createConnection(ConnectionFactory.java:226)
-	at io.agroal.pool.ConnectionPool$CreateConnectionTask.call(ConnectionPool.java:536)
-	at io.agroal.pool.ConnectionPool$CreateConnectionTask.call(ConnectionPool.java:517)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at io.agroal.pool.util.PriorityScheduledExecutor.beforeExecute(PriorityScheduledExecutor.java:75)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-Caused by: java.net.ConnectException: Connection refused
-	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
-	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
-	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:547)
-	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
-	at java.base/java.net.Socket.connect(Socket.java:633)
-	at org.mariadb.jdbc.client.impl.ConnectionHelper.connectSocket(ConnectionHelper.java:131)
-	... 12 more
+alter table if exists Batterij modify column verkoperID bigint not null;
+alter table if exists Batterij modify column aantalKWh bigint;
+alter table if exists Batterij modify column koperID bigint;
+alter table if exists Energiemetingen modify column huishoudenID bigint not null;
+alter table if exists Energiemetingen modify column opwekKWh bigint;
+alter table if exists Energiemetingen modify column verbruikKWh bigint;
+alter table if exists Huishouden modify column huishoudenID bigint not null;
+alter table if exists Huishouden modify column huisnummer bigint;
 
-2023-11-06 12:27:59,528 timo-virtual-machine EnergieCommunitiesAPI-dev.jar[4807] WARN  [io.agr.pool] (agroal-11) Datasource '<default>': Socket fail to connect to host:address=(host=localhost)(port=3306)(type=primary). Connection refused
-2023-11-06 12:27:59,538 timo-virtual-machine EnergieCommunitiesAPI-dev.jar[4807] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (Hibernate post-boot validation thread for <default>) SQL Error: 0, SQLState: 08000
-2023-11-06 12:27:59,546 timo-virtual-machine EnergieCommunitiesAPI-dev.jar[4807] ERROR [org.hib.eng.jdb.spi.SqlExceptionHelper] (Hibernate post-boot validation thread for <default>) Socket fail to connect to host:address=(host=localhost)(port=3306)(type=primary). Connection refused
-2023-11-06 12:27:59,550 timo-virtual-machine EnergieCommunitiesAPI-dev.jar[4807] ERROR [io.qua.hib.orm.run.sch.SchemaManagementIntegrator] (Hibernate post-boot validation thread for <default>) Failed to run post-boot validation: org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Socket fail to connect to host:address=(host=localhost)(port=3306)(type=primary). Connection refused] [n/a]
-	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:49)
-	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:56)
-	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
-	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94)
-	at org.hibernate.resource.transaction.backend.jta.internal.DdlTransactionIsolatorJtaImpl.getIsolatedConnection(DdlTransactionIsolatorJtaImpl.java:77)
-	at org.hibernate.resource.transaction.backend.jta.internal.DdlTransactionIsolatorJtaImpl.getIsolatedConnection(DdlTransactionIsolatorJtaImpl.java:67)
-	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:63)
-	at org.hibernate.tool.schema.extract.spi.ExtractionContext.getQueryResults(ExtractionContext.java:43)
-	at org.hibernate.tool.schema.extract.internal.SequenceInformationExtractorMariaDBDatabaseImpl.extractMetadata(SequenceInformationExtractorMariaDBDatabaseImpl.java:46)
-	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.initializeSequences(DatabaseInformationImpl.java:66)
-	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.<init>(DatabaseInformationImpl.java:60)
-	at org.hibernate.tool.schema.internal.Helper.buildDatabaseInformation(Helper.java:187)
-	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.doValidation(AbstractSchemaValidator.java:67)
-	at io.quarkus.hibernate.orm.runtime.schema.SchemaManagementIntegrator.runPostBootValidation(SchemaManagementIntegrator.java:140)
-	at io.quarkus.hibernate.orm.runtime.HibernateOrmRecorder$6.run(HibernateOrmRecorder.java:166)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-Caused by: java.sql.SQLNonTransientConnectionException: Socket fail to connect to host:address=(host=localhost)(port=3306)(type=primary). Connection refused
-	at org.mariadb.jdbc.client.impl.ConnectionHelper.connectSocket(ConnectionHelper.java:137)
-	at org.mariadb.jdbc.client.impl.StandardClient.<init>(StandardClient.java:99)
-	at org.mariadb.jdbc.Driver.connect(Driver.java:70)
-	at org.mariadb.jdbc.Driver.connect(Driver.java:101)
-	at org.mariadb.jdbc.Driver.connect(Driver.java:27)
-	at io.agroal.pool.ConnectionFactory.createConnection(ConnectionFactory.java:226)
-	at io.agroal.pool.ConnectionPool$CreateConnectionTask.call(ConnectionPool.java:536)
-	at io.agroal.pool.ConnectionPool$CreateConnectionTask.call(ConnectionPool.java:517)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at io.agroal.pool.util.PriorityScheduledExecutor.beforeExecute(PriorityScheduledExecutor.java:75)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	... 1 more
-Caused by: java.net.ConnectException: Connection refused
-	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
-	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
-	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:547)
-	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
-	at java.base/java.net.Socket.connect(Socket.java:633)
-	at org.mariadb.jdbc.client.impl.ConnectionHelper.connectSocket(ConnectionHelper.java:131)
-	... 12 more
-
-2023-11-06 12:27:59,625 timo-virtual-machine EnergieCommunitiesAPI-dev.jar[4807] INFO  [io.quarkus] (Quarkus Main Thread) EnergieCommunitiesAPI 1.0.0-SNAPSHOT on JVM (powered by Quarkus 3.4.2) started in 29.683s. Listening on: http://localhost:8080
-2023-11-06 12:27:59,629 timo-virtual-machine EnergieCommunitiesAPI-dev.jar[4807] INFO  [io.quarkus] (Quarkus Main Thread) Profile dev activated. Live Coding activated.
-2023-11-06 12:27:59,631 timo-virtual-machine EnergieCommunitiesAPI-dev.jar[4807] INFO  [io.quarkus] (Quarkus Main Thread) Installed features: [agroal, cdi, hibernate-orm, jdbc-mariadb, narayana-jta, oidc, resteasy-reactive, resteasy-reactive-jackson, security, smallrye-context-propagation, smallrye-openapi, swagger-ui, vertx]
-2023-11-06 12:30:35,790 timo-virtual-machine EnergieCommunitiesAPI-dev.jar[4807] WARN  [io.ver.cor.imp.BlockedThreadChecker] (vertx-blocked-thread-checker) Thread Thread[vert.x-eventloop-thread-0,5,main] has been blocked for 2246 ms, time limit is 2000 ms: io.vertx.core.VertxException: Thread blocked
-	at io.vertx.core.json.impl.JsonUtil.wrapJsonValue(JsonUtil.java:74)
-	at io.vertx.core.json.JsonObject.getValue(JsonObject.java:696)
-	at io.quarkus.oidc.runtime.OidcUtils.findClaimValue(OidcUtils.java:213)
-	at io.quarkus.oidc.runtime.OidcUtils.findClaimValue(OidcUtils.java:219)
-	at io.quarkus.oidc.runtime.OidcUtils.findClaimWithRoles(OidcUtils.java:196)
-	at io.quarkus.oidc.runtime.OidcUtils.findRoles(OidcUtils.java:184)
-	at io.quarkus.oidc.runtime.OidcUtils.setSecurityIdentityRoles(OidcUtils.java:275)
-	at io.quarkus.oidc.runtime.OidcUtils.validateAndCreateIdentity(OidcUtils.java:263)
-	at io.quarkus.oidc.runtime.OidcIdentityProvider.createSecurityIdentityWithOidcServer(OidcIdentityProvider.java:284)
-	at io.quarkus.oidc.runtime.OidcIdentityProvider$5.apply(OidcIdentityProvider.java:236)
-	at io.quarkus.oidc.runtime.OidcIdentityProvider$5.apply(OidcIdentityProvider.java:217)
-	at io.smallrye.context.impl.wrappers.SlowContextualBiFunction.apply(SlowContextualBiFunction.java:21)
-	at io.smallrye.mutiny.operators.uni.UniOnItemOrFailureFlatMap$UniOnItemOrFailureFlatMapProcessor.performInnerSubscription(UniOnItemOrFailureFlatMap.java:86)
-	at io.smallrye.mutiny.operators.uni.UniOnItemOrFailureFlatMap$UniOnItemOrFailureFlatMapProcessor.onItem(UniOnItemOrFailureFlatMap.java:54)
-	at io.smallrye.mutiny.operators.uni.builders.UniCreateFromKnownItem$KnownItemSubscription.forward(UniCreateFromKnownItem.java:38)
-	at io.smallrye.mutiny.operators.uni.builders.UniCreateFromKnownItem.subscribe(UniCreateFromKnownItem.java:23)
-	at io.smallrye.mutiny.operators.AbstractUni.subscribe(AbstractUni.java:36)
-	at io.smallrye.mutiny.operators.uni.UniOnItemOrFailureFlatMap.subscribe(UniOnItemOrFailureFlatMap.java:27)
-	at io.smallrye.mutiny.operators.AbstractUni.subscribe(AbstractUni.java:36)
-	at io.smallrye.mutiny.operators.uni.UniOnItemOrFailureFlatMap$UniOnItemOrFailureFlatMapProcessor.performInnerSubscription(UniOnItemOrFailureFlatMap.java:99)
-	at io.smallrye.mutiny.operators.uni.UniOnItemOrFailureFlatMap$UniOnItemOrFailureFlatMapProcessor.onItem(UniOnItemOrFailureFlatMap.java:54)
-	at io.smallrye.mutiny.operators.uni.builders.UniCreateFromKnownItem$KnownItemSubscription.forward(UniCreateFromKnownItem.java:38)
-	at io.smallrye.mutiny.operators.uni.builders.UniCreateFromKnownItem.subscribe(UniCreateFromKnownItem.java:23)
-	at io.smallrye.mutiny.operators.AbstractUni.subscribe(AbstractUni.java:36)
-	at io.smallrye.mutiny.operators.uni.UniOnItemOrFailureFlatMap.subscribe(UniOnItemOrFailureFlatMap.java:27)
-	at io.smallrye.mutiny.operators.AbstractUni.subscribe(AbstractUni.java:36)
-	at io.smallrye.mutiny.operators.uni.builders.UniCreateFromDeferredSupplier.subscribe(UniCreateFromDeferredSupplier.java:36)
-	at io.smallrye.mutiny.operators.AbstractUni.subscribe(AbstractUni.java:36)
-	at io.smallrye.mutiny.operators.uni.UniOnItemTransformToUni$UniOnItemTransformToUniProcessor.performInnerSubscription(UniOnItemTransformToUni.java:81)
-	at io.smallrye.mutiny.operators.uni.UniOnItemTransformToUni$UniOnItemTransformToUniProcessor.onItem(UniOnItemTransformToUni.java:57)
-	at io.smallrye.mutiny.operators.uni.UniOnItemTransformToUni$UniOnItemTransformToUniProcessor.onItem(UniOnItemTransformToUni.java:60)
-	at io.smallrye.mutiny.operators.uni.UniOnItemTransform$UniOnItemTransformProcessor.onItem(UniOnItemTransform.java:43)
-	at io.smallrye.mutiny.operators.uni.UniOnItemTransform$UniOnItemTransformProcessor.onItem(UniOnItemTransform.java:43)
-	at io.smallrye.mutiny.operators.uni.UniOnItemTransformToUni$UniOnItemTransformToUniProcessor.onItem(UniOnItemTransformToUni.java:60)
-	at io.smallrye.mutiny.operators.uni.UniOnItemTransform$UniOnItemTransformProcessor.onItem(UniOnItemTransform.java:43)
-	at io.smallrye.mutiny.operators.uni.UniOnItemTransform$UniOnItemTransformProcessor.onItem(UniOnItemTransform.java:43)
-	at io.smallrye.mutiny.vertx.AsyncResultUni.lambda$subscribe$1(AsyncResultUni.java:35)
-	at io.smallrye.mutiny.vertx.AsyncResultUni$$Lambda$1974/0x00007f503ca0aac8.handle(Unknown Source)
-	at io.smallrye.mutiny.vertx.DelegatingHandler.handle(DelegatingHandler.java:25)
-	at io.vertx.ext.web.client.impl.HttpContext.handleDispatchResponse(HttpContext.java:397)
-	at io.vertx.ext.web.client.impl.HttpContext.execute(HttpContext.java:384)
-	at io.vertx.ext.web.client.impl.HttpContext.next(HttpContext.java:362)
-	at io.vertx.ext.web.client.impl.HttpContext.fire(HttpContext.java:329)
-	at io.vertx.ext.web.client.impl.HttpContext.dispatchResponse(HttpContext.java:291)
-	at io.vertx.ext.web.client.impl.HttpContext.lambda$null$7(HttpContext.java:507)
-	at io.vertx.ext.web.client.impl.HttpContext$$Lambda$2319/0x00007f503ccd7bb0.handle(Unknown Source)
-	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:277)
-	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:259)
-	at io.vertx.core.impl.EventLoopContext.lambda$runOnContext$0(EventLoopContext.java:43)
-	at io.vertx.core.impl.EventLoopContext$$Lambda$2238/0x00007f503cc725f8.run(Unknown Source)
-	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:174)
-	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:167)
-	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:470)
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:566)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-	at java.base@17.0.8.1/java.lang.Thread.run(Thread.java:833)
-
-2023-11-06 12:30:36,085 timo-virtual-machine EnergieCommunitiesAPI-dev.jar[4807] INFO  [nl.zuy.ec.RequestLoggingFilter] (executor-thread-1) [REST Logging] Accept: [*/*]
-2023-11-06 12:30:36,093 timo-virtual-machine EnergieCommunitiesAPI-dev.jar[4807] INFO  [nl.zuy.ec.RequestLoggingFilter] (executor-thread-1) [REST Logging] Accept-Encoding: [gzip, deflate, br]
-2023-11-06 12:30:36,096 timo-virtual-machine EnergieCommunitiesAPI-dev.jar[4807] INFO  [nl.zuy.ec.RequestLoggingFilter] (executor-thread-1) [REST Logging] Authorization: [Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJHNWljUFNKdGxuZ2RaMFd1VkFWMzRXNFZqeVVhYmRvZXJRWWtNdU96RzRVIn0.eyJleHAiOjE2OTkyNzIwMDQsImlhdCI6MTY5OTI3MDIwNCwianRpIjoiM2IyNWIyZmYtZGI5Ny00YzllLWE0YzMtMGYzY2NjMjBiNzJiIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MTgwL3JlYWxtcy9lbmVyZ2llY29tbXVuaXRpZXMiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiNWI0OGU3MGUtN2EyMy00NThjLWE4M2QtMDVkYjQyMTNiNDA0IiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiZW5lcmdpZWNvbW11bml0aWVzYXBpIiwic2Vzc2lvbl9zdGF0ZSI6ImY5NWIzZDI4LWU5NzQtNGMyMy1hMjhiLTNhMzFlMzZiZTQ4NiIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiLyoiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbImRlZmF1bHQtcm9sZXMtZW5lcmdpZWNvbW11bml0aWVzIiwib2ZmbGluZV9hY2Nlc3MiLCJodWlzaG91ZGVuIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6InByb2ZpbGUgZW1haWwiLCJzaWQiOiJmOTViM2QyOC1lOTc0LTRjMjMtYTI4Yi0zYTMxZTM2YmU0ODYiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwibmFtZSI6IkJlcHBpZSBKYXNwZXJzIiwicHJlZmVycmVkX3VzZXJuYW1lIjoiaHVpc2hvdWRlbjIiLCJnaXZlbl9uYW1lIjoiQmVwcGllIiwiZmFtaWx5X25hbWUiOiJKYXNwZXJzIiwiZW1haWwiOiJiZXBwaWVAdGVzdC5jb20ifQ.gvXKg233qDFD7jWMmieOew7gHN9cXW4GG3K3RFPWPnfenF_b4Tk4PSngt_EwC0_7_EWkIxStDlWWgPZLSHbuMgVTfaDHtaAH7SlAH_WkFOK0JC5OhLXnApJRnOVYgbzPv-pYKEC7USfz0s-UrtrHJkUcobzXAZDW8OryVXx4S13G2-EiPKKiz-oBb9rGw3kRpWK5uO_RiSaMVANHN_iO5NLyoXAXbVBjN1BtZLHhQAIQ1MXBuhYXbP3NivYoIhrOQWOYdgeAcwiGKjn4HuMAZKgWQni-HkFKwwomaV2GwGpQU1rIPIma_DuFReC-NEhazjHR1yCcDbKW1B7Y37aRdw]
-2023-11-06 12:30:36,100 timo-virtual-machine EnergieCommunitiesAPI-dev.jar[4807] INFO  [nl.zuy.ec.RequestLoggingFilter] (executor-thread-1) [REST Logging] Connection: [keep-alive]
-2023-11-06 12:30:36,102 timo-virtual-machine EnergieCommunitiesAPI-dev.jar[4807] INFO  [nl.zuy.ec.RequestLoggingFilter] (executor-thread-1) [REST Logging] Host: [localhost:8080]
-2023-11-06 12:30:36,106 timo-virtual-machine EnergieCommunitiesAPI-dev.jar[4807] INFO  [nl.zuy.ec.RequestLoggingFilter] (executor-thread-1) [REST Logging] Postman-Token: [8711af4c-f499-4358-9b5e-0ad03dd1aafd]
-2023-11-06 12:30:36,110 timo-virtual-machine EnergieCommunitiesAPI-dev.jar[4807] INFO  [nl.zuy.ec.RequestLoggingFilter] (executor-thread-1) [REST Logging] User-Agent: [PostmanRuntime/7.34.0]
-2023-11-06 13:12:06,597 timo-virtual-machine EnergieCommunitiesAPI-dev.jar[4807] INFO  [io.quarkus] (Shutdown thread) EnergieCommunitiesAPI stopped in 7.959s
+2023-11-06 14:53:25,702 timo-virtual-machine EnergieCommunitiesAPI-dev.jar[7744] INFO  [nl.zuy.ec.RequestLoggingFilter] (executor-thread-1) [REST Logging] Authorization: [Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJHNWljUFNKdGxuZ2RaMFd1VkFWMzRXNFZqeVVhYmRvZXJRWWtNdU96RzRVIn0.eyJleHAiOjE2OTkyODA1MzEsImlhdCI6MTY5OTI3ODczMSwiYXV0aF90aW1lIjoxNjk5Mjc4NzMxLCJqdGkiOiI0N2I2MGExMy0yYmFiLTQyOWQtODQ3Yi1iMTc4ZDQ4MzMxYzUiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgxODAvcmVhbG1zL2VuZXJnaWVjb21tdW5pdGllcyIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiI1YjQ4ZTcwZS03YTIzLTQ1OGMtYTgzZC0wNWRiNDIxM2I0MDQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJwb3J0YWFsIiwic2Vzc2lvbl9zdGF0ZSI6IjUwOTc4MTlmLTFkMGMtNDU3NS05MzMyLWE4NDc0MmI0MmMxNiIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiKiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiZGVmYXVsdC1yb2xlcy1lbmVyZ2llY29tbXVuaXRpZXMiLCJvZmZsaW5lX2FjY2VzcyIsImh1aXNob3VkZW4iLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwgbWljcm9wcm9maWxlLWp3dCIsInNpZCI6IjUwOTc4MTlmLTFkMGMtNDU3NS05MzMyLWE4NDc0MmI0MmMxNiIsInVwbiI6Imh1aXNob3VkZW4yIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsIm5hbWUiOiJCZXBwaWUgSmFzcGVycyIsImdyb3VwcyI6WyJkZWZhdWx0LXJvbGVzLWVuZXJnaWVjb21tdW5pdGllcyIsIm9mZmxpbmVfYWNjZXNzIiwiaHVpc2hvdWRlbiIsInVtYV9hdXRob3JpemF0aW9uIl0sInByZWZlcnJlZF91c2VybmFtZSI6Imh1aXNob3VkZW4yIiwiZ2l2ZW5fbmFtZSI6IkJlcHBpZSIsImZhbWlseV9uYW1lIjoiSmFzcGVycyIsImVtYWlsIjoiYmVwcGllQHRlc3QuY29tIn0.nL851a6QrMB8xLXhj3KH1ix3ALOG7YJCEeMBmD8Wizg5w9NAFUK2BBJiFzG3_C7VsDwSYTVXD1ymq3Unq6k8yVIj-JkaRmltkXYzt7waKEi3oWNfJ5xtyemf_6t7EYc7IERZSjzfdIDkLhP5WIozc0LDfkDCg7aaIPsCNXJwi9tFDbuclX6mnHt4JALYZi5wew61cEpmGlMFUUDrh_-mH8v-5y3k3pS-hHTc0a3HDjRdo6nrn-zPPQmD7s4knvN7CM0VY74mwdHMNydxms8ni-HoIHxhs8pwpLyrgBhgKNefX3wztayL4JdXj_F3Ra2HGof-YvSyCJqfCegkleTxYQ]
+2023-11-06 14:53:25,708 timo-virtual-machine EnergieCommunitiesAPI-dev.jar[7744] INFO  [nl.zuy.ec.RequestLoggingFilter] (executor-thread-1) [REST Logging] host: [localhost:8080]
+2023-11-06 14:53:25,709 timo-virtual-machine EnergieCommunitiesAPI-dev.jar[7744] INFO  [nl.zuy.ec.RequestLoggingFilter] (executor-thread-1) [REST Logging] User-Agent: [Resteasy Reactive Client]
+2023-11-06 14:53:38,769 timo-virtual-machine EnergieCommunitiesAPI-dev.jar[7744] INFO  [io.quarkus] (Shutdown thread) EnergieCommunitiesAPI stopped in 0.048s

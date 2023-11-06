@@ -13,6 +13,8 @@ import jakarta.ws.rs.core.SecurityContext;
 
 import java.util.List;
 
+import static java.lang.System.in;
+
 @Path("/api/metingen")
 @Authenticated
 public class EnergiemetingenResource {
