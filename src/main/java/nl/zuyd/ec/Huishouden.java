@@ -5,61 +5,51 @@ import jakarta.persistence.Id;
 
 @Entity
 public class Huishouden {
-    private Long HuishoudenID;
-    private String Straat;
-    private Long Huisnummer;
-    private String Postcode;
-    private String Woonplaats;
+    private Long huishoudenID;
+    private String straat;
+    private Long huisnummer;
+    private String postcode;
+    private String woonplaats;
 
 
     @Id
     public Long getHuishoudenID() {
-        return HuishoudenID;
+        return huishoudenID;
     }
 
     public void setHuishoudenID(Long huishoudenID) {
-        HuishoudenID = huishoudenID;
+        this.huishoudenID = huishoudenID;
     }
 
-
-
     public String getStraat() {
-        return Straat;
+        return straat;
     }
 
     public void setStraat(String straat) {
-        Straat = straat;
+        this.straat = straat;
     }
 
-
-
     public Long getHuisnummer() {
-        return Huisnummer;
+        return huisnummer;
     }
 
     public void setHuisnummer(Long huisnummer) {
-        Huisnummer = huisnummer;
+        this.huisnummer = huisnummer;
     }
 
-
-
-
     public String getPostcode() {
-        return Postcode;
+        return postcode;
     }
 
     public void setPostcode(String postcode) {
-        Postcode = postcode;
+        this.postcode = postcode;
     }
 
-
-
-
     public String getWoonplaats() {
-        return Woonplaats;
+        return woonplaats;
     }
 
     public void setWoonplaats(String woonplaats) {
-        Woonplaats = woonplaats;
+        this.woonplaats = woonplaats;
     }
 }
