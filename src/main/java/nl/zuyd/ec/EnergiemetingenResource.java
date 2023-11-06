@@ -35,9 +35,6 @@ public class EnergiemetingenResource {
         if(username.substring(username.length() - 1).equals(id)){
             //
             List<Energiemetingen> metingen = em.createNamedQuery("Energiemetingen.findAll", Energiemetingen.class).setParameter("id", id).getResultList();
-            //Query query = em.createNativeQuery("SELECT * FROM Energiemetingen WHERE huishoudenID = :id");
-            //query.setParameter("id", id);
-            //List<Energiemetingen> metingen = query.getResultList();
             return metingen;
         }
         else{

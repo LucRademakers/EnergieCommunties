@@ -7,8 +7,6 @@ import java.sql.Date;
 @Entity
 @Table(name = "Energiemetingen")
 @NamedQuery(name = "Energiemetingen.findAll", query = "SELECT f FROM Energiemetingen f WHERE f.huishoudenID = :id")
-@org.hibernate.annotations.NamedQuery(name = "Energiemetingen_findAll",
-        query = "from Energiemetingen where huishoudenID = :id")
 
 public class Energiemetingen {
     private Long huishoudenID;
